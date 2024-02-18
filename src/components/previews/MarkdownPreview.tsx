@@ -29,63 +29,6 @@ const MarkdownPreview: FC<{
 
   // Check if the image is relative path instead of a absolute url
   const isUrlAbsolute = (url: string | string[]) => url.indexOf('://') > 0 || url.indexOf('//') === 0
-  // Custom renderer:
-  const customRenderer = {
-    // img: to render images in markdown with relative file paths
-    img: ({
-      alt,
-      src,
-      title,
-      width,
-      height,
-      style,
-    }: {
-      alt?: string
-      src?: string
-      title?: string
-      width?: string | number
-      height?: string | number
-      style?: CSSProperties
-    }) => {
-      return (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          alt={alt}
-          src={isUrlAbsolute(src as string) ? src : `/api/?path=${parentPath}/${src}&raw=true`}
-          title={title}
-          width={width}
-          height={height}
-          style={style}
-        />
-      )
-    },
-    // code: to render code blocks with react-syntax-highlighter
-    code({
-      className,
-      children,
-      inline,
-      ...props
-    }: {
-      className?: string | undefined
-      children: ReactNode
-      inline?: boolean
-    }) {
-      if (inline) {
-        return (
-          <code className={className} {...props}>
-            {children}
-          </code>
-        )
-      }
-
-      const match = /language-(\w+)/.exec(className || '')
-      return (
-        <SyntaxHighlighter language={match ? match[1] : 'language-text'} style={tomorrowNight} PreTag="div" {...props}>
-          {String(children).replace(/\n$/, '')}
-        </SyntaxHighlighter>
-      )
-    },
-  }
 
   if (error) {
     return (
@@ -122,7 +65,34 @@ const MarkdownPreview: FC<{
             // ignoring it shoudld be safe enough.
             // @ts-ignore
             rehypePlugins={[rehypeKatex, rehypeRaw]}
-            components={customRenderer}
+            components={{
+              img(props) {
+                const { alt, src, title, width, height, style } = props
+                return (
+                  <img
+                    alt={alt}
+                    src={isUrlAbsolute(src as string) ? src : `/api/?path=${parentPath}/${src}&raw=true`}
+                    title={title}
+                    width={width}
+                    height={height}
+                    style={style}
+                  />
+                )
+              },
+              code(props) {
+                const { children, className, node, ref, ...rest } = props
+                const match = /language-(\w+)/.exec(className || '')
+                return match ? (
+                  <SyntaxHighlighter {...rest} PreTag="div" language={match[1]} style={tomorrowNight}>
+                    {String(children).replace(/\n$/, '')}
+                  </SyntaxHighlighter>
+                ) : (
+                  <code {...rest} className={className}>
+                    {children}
+                  </code>
+                )
+              },
+            }}
           >
             {content}
           </ReactMarkdown>
