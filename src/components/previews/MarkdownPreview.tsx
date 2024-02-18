@@ -122,7 +122,7 @@ const MarkdownPreview: FC<{
             // ignoring it shoudld be safe enough.
             // @ts-ignore
             rehypePlugins={[rehypeKatex, rehypeRaw]}
-            components={customRenderer}
+            components={customRenderer as Partial<Components>}
           >
             {content}
           </ReactMarkdown>
