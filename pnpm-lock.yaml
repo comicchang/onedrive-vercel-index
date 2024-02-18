@@ -87,8 +87,8 @@ dependencies:
     specifier: ^0.17.0
     version: 0.17.0(react-dom@18.2.0)(react@18.2.0)
   react-cookie:
-    specifier: ^6.0.0
-    version: 6.0.0(react@18.2.0)
+    specifier: ^7.0.0
+    version: 7.0.2(react@18.2.0)
   react-copy-to-clipboard:
     specifier: ^5.0.3
     version: 5.1.0(react@18.2.0)
@@ -706,8 +706,8 @@ packages:
       tailwindcss: 3.2.4(postcss@8.4.21)
     dev: false
 
-  /@types/cookie@0.5.1:
-    resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
+  /@types/cookie@0.6.0:
+    resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
     dev: false
 
   /@types/cors@2.8.13:
@@ -1462,8 +1462,8 @@ packages:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
     dev: true
 
-  /cookie@0.5.0:
-    resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
+  /cookie@0.6.0:
+    resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
     dev: false
 
@@ -4812,15 +4812,15 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /react-cookie@6.0.0(react@18.2.0):
-    resolution: {integrity: sha512-yVhiLYzilL5c1aVplTPbiD5Tx1B2u8QS8rvO0Gv8bYT2uX6S0NBSBwl97zC5fEZXaKGq7wLlvOfEW+NuqXQ+CA==}
+  /react-cookie@7.0.2(react@18.2.0):
+    resolution: {integrity: sha512-UnW1rZw1VibRdTvV8Ksr0BKKZoajeUxYLE89sIygDeyQgtz6ik89RHOM+3kib36G9M7HxheORggPoLk5DxAK7Q==}
     peerDependencies:
       react: '>= 16.3.0'
     dependencies:
-      '@types/hoist-non-react-statics': 3.3.1
+      '@types/hoist-non-react-statics': 3.3.5
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
-      universal-cookie: 6.0.0
+      universal-cookie: 7.0.2
     dev: false
 
   /react-copy-to-clipboard@5.1.0(react@18.2.0):
@@ -5883,11 +5883,11 @@ packages:
       unist-util-visit-parents: 6.0.1
     dev: false
 
-  /universal-cookie@6.0.0:
-    resolution: {integrity: sha512-zD86uNdL2f5R8dAobm/4cdozQjHbVjreIFnm0wVLQOPXmsPb9YCLo4VF9IS2d/JU/sy2nHjPecUTXdLt1eGjtA==}
+  /universal-cookie@7.0.2:
+    resolution: {integrity: sha512-EC9PA+1nojhJtVnKW2Z7WYah01jgYJApqhX+Y8XU97TnFd7KaoxWTHiTZFtfpfV50jEF1L8V5p64ZxIx3Q67dg==}
     dependencies:
-      '@types/cookie': 0.5.1
-      cookie: 0.5.0
+      '@types/cookie': 0.6.0
+      cookie: 0.6.0
     dev: false
 
   /universalify@0.1.2:
