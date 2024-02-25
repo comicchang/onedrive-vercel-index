@@ -88,7 +88,7 @@ dependencies:
     version: 0.17.0(react-dom@18.2.0)(react@18.2.0)
   react-cookie:
     specifier: ^7.0.2
-    version: 7.0.2(react@18.2.0)
+    version: 7.1.0(react@18.2.0)
   react-copy-to-clipboard:
     specifier: ^5.1.0
     version: 5.1.0(react@18.2.0)
@@ -4479,15 +4479,15 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /react-cookie@7.0.2(react@18.2.0):
-    resolution: {integrity: sha512-UnW1rZw1VibRdTvV8Ksr0BKKZoajeUxYLE89sIygDeyQgtz6ik89RHOM+3kib36G9M7HxheORggPoLk5DxAK7Q==}
+  /react-cookie@7.1.0(react@18.2.0):
+    resolution: {integrity: sha512-n2+Gt07/xxuShXary+SImk1sw5l7a1UguQOQEN55YewEW5LoA0opbR4nbeo8sY6OYwR37iCFJtqJ0AGEywqAtg==}
     peerDependencies:
       react: '>= 16.3.0'
     dependencies:
       '@types/hoist-non-react-statics': 3.3.5
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
-      universal-cookie: 7.0.2
+      universal-cookie: 7.1.0
     dev: false
 
   /react-copy-to-clipboard@5.1.0(react@18.2.0):
@@ -5415,8 +5415,8 @@ packages:
       unist-util-visit-parents: 6.0.1
     dev: false
 
-  /universal-cookie@7.0.2:
-    resolution: {integrity: sha512-EC9PA+1nojhJtVnKW2Z7WYah01jgYJApqhX+Y8XU97TnFd7KaoxWTHiTZFtfpfV50jEF1L8V5p64ZxIx3Q67dg==}
+  /universal-cookie@7.1.0:
+    resolution: {integrity: sha512-LCLHwP0whxTqkBYMptW1dzNS0xxIVJmU6c51N5CfPNheVxuJW7fVxPa6MUGX7boUSyOlpMveBO96hMs5Gee6Fg==}
     dependencies:
       '@types/cookie': 0.6.0
       cookie: 0.6.0
