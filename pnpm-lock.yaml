@@ -161,7 +161,7 @@ importers:
         version: 18.3.0
       '@types/react-syntax-highlighter':
         specifier: ^15.5.11
-        version: 15.5.11
+        version: 15.5.12
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.19(postcss@8.4.38)
@@ -607,8 +607,8 @@ packages:
   '@types/react-dom@18.3.0':
     resolution: {integrity: sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==}
 
-  '@types/react-syntax-highlighter@15.5.11':
-    resolution: {integrity: sha512-ZqIJl+Pg8kD+47kxUjvrlElrraSUrYa4h0dauY/U/FTUuprSCqvUj+9PNQNQzVc6AJgIWUUxn87/gqsMHNbRjw==}
+  '@types/react-syntax-highlighter@15.5.12':
+    resolution: {integrity: sha512-wCuk2HWXqEkHFzNMYmdMgyVRoxJEndutEBz3rKqmcrnkwGDtwT8gMtRaTPzXWPVasJ9NydQ54dbosg2sW65PCg==}
 
   '@types/react@18.3.1':
     resolution: {integrity: sha512-V0kuGBX3+prX+DQ/7r2qsv1NsdfnCLnTgnRJ1pYnxykBhGMz+qj+box5lq7XsO5mtZsBqpjwwTu/7wszPfMBcw==}
@@ -3392,7 +3392,7 @@ snapshots:
     dependencies:
       '@types/react': 18.3.1
 
-  '@types/react-syntax-highlighter@15.5.11':
+  '@types/react-syntax-highlighter@15.5.12':
     dependencies:
       '@types/react': 18.3.1
 
