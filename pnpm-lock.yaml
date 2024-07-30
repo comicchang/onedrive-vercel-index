@@ -112,7 +112,7 @@ importers:
         version: 9.0.1(@types/react@18.3.3)(react@18.3.1)
       react-reader:
         specifier: ^2.0.9
-        version: 2.0.10(react@18.3.1)
+        version: 2.0.11(react@18.3.1)
       react-syntax-highlighter:
         specifier: ^15.5.0
         version: 15.5.0(react@18.3.1)
@@ -986,9 +986,6 @@ packages:
 
   core-js@3.36.1:
     resolution: {integrity: sha512-BTvUrwxVBezj5SZ3f10ImnX2oRByMxql3EimVqMysepbC9EeMUOpLwdy6Eoili2x6E4kf+ZUB5k/+Jv55alPfA==}
-
-  core-js@3.37.0:
-    resolution: {integrity: sha512-fu5vHevQ8ZG4og+LXug8ulUtVxjOcEYvifJr7L5Bfq9GOztVqsKd9/59hUk2ZSbCrS3BqUr3EpaYGIYzq7g3Ug==}
 
   core-js@3.37.1:
     resolution: {integrity: sha512-Xn6qmxrQZyB0FFY8E3bgRXei3lWDJHhvI+u0q9TKIYM49G8pAr0FgnnrFRAmsbptZL1yxRADVXn+x5AGsbBfyw==}
@@ -2542,8 +2539,8 @@ packages:
       '@types/react': '>=18'
       react: '>=18'
 
-  react-reader@2.0.10:
-    resolution: {integrity: sha512-eNd4GEmbsttSq79eCAXFRw0VkGMeGTQh4mCRiFOFhlhZOsVPOqkCnUqWqrhiFpB/7SDaDkJJE8wcZYgIZQ7CoA==}
+  react-reader@2.0.11:
+    resolution: {integrity: sha512-4PZoRc0x9d4OzE1C8XRvgAbAH8KFBxid982XMVD1RgVhN6IGtQ8F8w0GX56UuV63vQgaYoHLFR6Qmj2wcoy4Fw==}
 
   react-swipeable@7.0.1:
     resolution: {integrity: sha512-RKB17JdQzvECfnVj9yDZsiYn3vH0eyva/ZbrCZXZR0qp66PBRhtg4F9yJcJTWYT5Adadi+x4NoG53BxKHwIYLQ==}
@@ -2911,8 +2908,8 @@ packages:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
 
-  type@2.7.2:
-    resolution: {integrity: sha512-dzlvlNlt6AXU7EBSfpAscydQ7gXB+pPGsPnfJnZpiNJBDj7IaJzQlBZYGdEi4R9HmPdBv2XmWJ6YUtoTa7lmCw==}
+  type@2.7.3:
+    resolution: {integrity: sha512-8j+1QmAbPvLZow5Qpi6NCaN8FB60p/6x8/vfNqOk/hC+HuvFZhL4+WfekuhQLiqFZXOgQdrs3B+XxEmCc6b3FQ==}
 
   typed-array-buffer@1.0.1:
     resolution: {integrity: sha512-RSqu1UEuSlrBhHTWC8O9FnPjOduNs4M7rJ4pRKoEjtx1zUNOPN2sSXHLDX+Y2WPbHIxbvg4JFo2DNAEfPIKWoQ==}
@@ -3830,8 +3827,6 @@ snapshots:
 
   core-js@3.36.1: {}
 
-  core-js@3.37.0: {}
-
   core-js@3.37.1: {}
 
   core-util-is@1.0.3: {}
@@ -3868,7 +3863,7 @@ snapshots:
   d@1.0.2:
     dependencies:
       es5-ext: 0.10.64
-      type: 2.7.2
+      type: 2.7.3
 
   damerau-levenshtein@1.0.8: {}
 
@@ -3971,7 +3966,7 @@ snapshots:
     dependencies:
       '@types/localforage': 0.0.34
       '@xmldom/xmldom': 0.7.13
-      core-js: 3.37.0
+      core-js: 3.37.1
       event-emitter: 0.3.5
       jszip: 3.10.1
       localforage: 1.10.0
@@ -4299,7 +4294,7 @@ snapshots:
       d: 1.0.2
       es5-ext: 0.10.64
       event-emitter: 0.3.5
-      type: 2.7.2
+      type: 2.7.3
 
   espree@10.1.0:
     dependencies:
@@ -4328,7 +4323,7 @@ snapshots:
 
   ext@1.7.0:
     dependencies:
-      type: 2.7.2
+      type: 2.7.3
 
   extend@3.0.2: {}
 
@@ -5847,7 +5842,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  react-reader@2.0.10(react@18.3.1):
+  react-reader@2.0.11(react@18.3.1):
     dependencies:
       epubjs: 0.3.93
       react-swipeable: 7.0.1(react@18.3.1)
@@ -6309,7 +6304,7 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
 
-  type@2.7.2: {}
+  type@2.7.3: {}
 
   typed-array-buffer@1.0.1:
     dependencies:
