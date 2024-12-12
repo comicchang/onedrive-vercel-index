@@ -112,7 +112,7 @@ importers:
         version: 9.0.1(@types/react@19.0.1)(react@19.0.0)
       react-reader:
         specifier: ^2.0.9
-        version: 2.0.11(react@19.0.0)
+        version: 2.0.12(react@19.0.0)
       react-syntax-highlighter:
         specifier: ^15.5.0
         version: 15.6.1(react@19.0.0)
@@ -2860,13 +2860,13 @@ packages:
       '@types/react': '>=18'
       react: '>=18'
 
-  react-reader@2.0.11:
-    resolution: {integrity: sha512-4PZoRc0x9d4OzE1C8XRvgAbAH8KFBxid982XMVD1RgVhN6IGtQ8F8w0GX56UuV63vQgaYoHLFR6Qmj2wcoy4Fw==}
+  react-reader@2.0.12:
+    resolution: {integrity: sha512-yO1o/l4Qh6XyYs6NVjNQBJqEIdWpTMZg9KubKgH2Ik5s7nRu/YMXAcEd8ZM1XPG+aWochZdgdEPPqQ8Sglj2IA==}
 
-  react-swipeable@7.0.1:
-    resolution: {integrity: sha512-RKB17JdQzvECfnVj9yDZsiYn3vH0eyva/ZbrCZXZR0qp66PBRhtg4F9yJcJTWYT5Adadi+x4NoG53BxKHwIYLQ==}
+  react-swipeable@7.0.2:
+    resolution: {integrity: sha512-v1Qx1l+aC2fdxKa9aKJiaU/ZxmJ5o98RMoFwUqAAzVWUcxgfHFXDDruCKXhw6zIYXm6V64JiHgP9f6mlME5l8w==}
     peerDependencies:
-      react: ^16.8.3 || ^17 || ^18
+      react: ^16.8.3 || ^17 || ^18 || ^19.0.0 || ^19.0.0-rc
 
   react-syntax-highlighter@15.6.1:
     resolution: {integrity: sha512-OqJ2/vL7lEeV5zTJyG7kmARppUjiB9h9udl4qHQjjgEos66z00Ia0OckwYfRxCSFrW8RJIBnsBwQsHZbVPspqg==}
@@ -6493,14 +6493,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  react-reader@2.0.11(react@19.0.0):
+  react-reader@2.0.12(react@19.0.0):
     dependencies:
       epubjs: 0.3.93
-      react-swipeable: 7.0.1(react@19.0.0)
+      react-swipeable: 7.0.2(react@19.0.0)
     transitivePeerDependencies:
       - react
 
-  react-swipeable@7.0.1(react@19.0.0):
+  react-swipeable@7.0.2(react@19.0.0):
     dependencies:
       react: 19.0.0
 
