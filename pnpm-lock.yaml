@@ -70,7 +70,7 @@ importers:
         version: 15.1.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       next-i18next:
         specifier: ^15.2.0
-        version: 15.4.1(i18next@24.2.2(typescript@5.7.3))(next@15.1.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-i18next@15.4.0(i18next@24.2.2(typescript@5.7.3))(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
+        version: 15.4.2(i18next@24.2.2(typescript@5.7.3))(next@15.1.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-i18next@15.4.0(i18next@24.2.2(typescript@5.7.3))(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
       nextjs-progressbar:
         specifier: ^0.0.16
         version: 0.0.16(next@15.1.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
@@ -770,6 +770,9 @@ packages:
   '@types/hoist-non-react-statics@3.3.5':
     resolution: {integrity: sha512-SbcrWzkKBw2cdwRTwQAswfpB9g9LJWfjtUeW/jvNwbhC8cpmmNYVePa+ncbUe0rGTQ7G3Ff6mYUN2VMfLVr+Sg==}
 
+  '@types/hoist-non-react-statics@3.3.6':
+    resolution: {integrity: sha512-lPByRJUer/iN/xa4qpyL0qmL11DqNW81iU/IG1S3uvRUq4oKagz8VCxZjiWkumgt66YT3vOdDgZ0o32sGKtCEw==}
+
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
@@ -1260,9 +1263,6 @@ packages:
 
   copy-to-clipboard@3.3.3:
     resolution: {integrity: sha512-2KV8NhB5JqC3ky0r9PMCAZKbUHSwtEo4CwCs0KXgruG43gX5PMqDEBbVU4OUzw2MuAWUfsuFmWvEKG5QRfSnJA==}
-
-  core-js@3.39.0:
-    resolution: {integrity: sha512-raM0ew0/jJUqkJ0E6e8UDtl+y/7ktFivgWvqw8dNSQeNWoSDLvQ1H/RN3aPXB9tBd4/FhyR4RDPGhsNIMsAn7g==}
 
   core-js@3.40.0:
     resolution: {integrity: sha512-7vsMc/Lty6AGnn7uFpYT56QesI5D2Y/UkgKounk87OP9Z2H9Z8kj6jzcSGAxFmUtDOS0ntK6lbQz+Nsa0Jj6mQ==}
@@ -2490,8 +2490,8 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  next-i18next@15.4.1:
-    resolution: {integrity: sha512-n3cFqBKDpEDLXZVYD52H6k2QzLAnUSuBie02BmVpfywNZGxcNgq6QXdpVpvONQ7WkBVntPtldt867ZgtEcP1Og==}
+  next-i18next@15.4.2:
+    resolution: {integrity: sha512-zgRxWf7kdXtM686ecGIBQL+Bq0+DqAhRlasRZ3vVF0TmrNTWkVhs52n//oU3Fj5O7r/xOKkECDUwfOuXVwTK/g==}
     engines: {node: '>=14'}
     peerDependencies:
       i18next: '>= 23.7.13'
@@ -3978,6 +3978,11 @@ snapshots:
       '@types/react': 19.0.8
       hoist-non-react-statics: 3.3.2
 
+  '@types/hoist-non-react-statics@3.3.6':
+    dependencies:
+      '@types/react': 19.0.8
+      hoist-non-react-statics: 3.3.2
+
   '@types/json-schema@7.0.15': {}
 
   '@types/json5@0.0.29': {}
@@ -4504,8 +4509,6 @@ snapshots:
     dependencies:
       toggle-selection: 1.0.6
 
-  core-js@3.39.0: {}
-
   core-js@3.40.0: {}
 
   core-util-is@1.0.3: {}
@@ -4671,7 +4674,7 @@ snapshots:
     dependencies:
       '@types/localforage': 0.0.34
       '@xmldom/xmldom': 0.7.13
-      core-js: 3.39.0
+      core-js: 3.40.0
       event-emitter: 0.3.5
       jszip: 3.10.1
       localforage: 1.10.0
@@ -6340,10 +6343,11 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-i18next@15.4.1(i18next@24.2.2(typescript@5.7.3))(next@15.1.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-i18next@15.4.0(i18next@24.2.2(typescript@5.7.3))(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0):
+  next-i18next@15.4.2(i18next@24.2.2(typescript@5.7.3))(next@15.1.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-i18next@15.4.0(i18next@24.2.2(typescript@5.7.3))(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0):
     dependencies:
-      '@babel/runtime': 7.26.0
-      core-js: 3.39.0
+      '@babel/runtime': 7.26.7
+      '@types/hoist-non-react-statics': 3.3.6
+      core-js: 3.40.0
       hoist-non-react-statics: 3.3.2
       i18next: 24.2.2(typescript@5.7.3)
       i18next-fs-backend: 2.6.0
