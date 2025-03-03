@@ -18,6 +18,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@headlessui/react": "^2.0.0",
     "@tailwindcss/line-clamp": "^0.4.4",
+    "@tailwindcss/postcss": "^4.0.9",
     "@vercel/analytics": "^1.2.0",
     "awesome-debounce-promise": "^2.1.0",
     "axios": "^1.6.7",
@@ -53,6 +54,7 @@
     "remark-gfm": "^4.0.0",
     "remark-math": "^6.0.0",
     "swr": "^2.2.5",
+    "tailwindcss": "^4.0.9",
     "use-clipboard-copy": "^0.2.0",
     "use-constant": "^1.1.1"
   },
@@ -69,10 +71,8 @@
     "eslint-config-next": "15.2.0",
     "eslint-config-prettier": "^10.0.0",
     "i18next-parser": "^9.0.0",
-    "postcss": "^8.4.35",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.6.0",
-    "tailwindcss": "^4.0.0",
     "typescript": "5.8.2"
   },
   "prettier": {
