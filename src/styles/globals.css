@@ -3,33 +3,28 @@
 @tailwind utilities;
 
 @layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
-    /* Chrome, Safari and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-        display: none;
-    }
-
-    .no-scrollbar {
-        -ms-overflow-style: none;
-        /* IE and Edge */
-        scrollbar-width: none;
-        /* Firefox */
-    }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
 .react-pdf__Page__canvas {
-    @reference mx-auto border border-gray-300 border-opacity-40 shadow;
+  @apply mx-auto border border-gray-300/40 shadow;
 }
 
 .markdown-body ul {
-    @reference list-disc;
+  @apply list-disc;
 }
-
 .markdown-body ol {
-    @reference list-decimal;
+  @apply list-decimal;
 }
-
 pre[class*='language-'],
 code[class*='language-'] {
-    @reference font-mono !important;
+  @apply font-mono !important;
 }
