@@ -29,5 +29,5 @@
 
 pre[class*='language-'],
 code[class*='language-'] {
-    @apply font-mono !important;
+    @apply font-mono!;
 }
