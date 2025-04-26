@@ -54,7 +54,7 @@
     "remark-math": "^6.0.0",
     "swr": "^2.2.5",
     "use-clipboard-copy": "^0.2.0",
-    "use-constant": "^1.1.1"
+    "use-constant": "^2.0.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.9",
