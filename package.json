@@ -42,7 +42,7 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.4.1",
-    "react-hotkeys-hook": "^4.5.0",
+    "react-hotkeys-hook": "^5.0.0",
     "react-i18next": "^15.0.0",
     "react-markdown": "^10.0.0",
     "react-reader": "^2.0.9",
