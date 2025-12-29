@@ -1,13 +1,17 @@
 import type { OdFileObject } from '../../types'
 import { FC, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
-
-import Preview from 'preview-office-docs'
+import dynamic from 'next/dynamic'
 
 import DownloadButtonGroup from '../DownloadBtnGtoup'
 import { DownloadBtnContainer } from './Containers'
 import { getBaseUrl } from '../../utils/getBaseUrl'
 import { getStoredToken } from '../../utils/protectedRouteHandler'
+
+const Preview = dynamic(() => import('preview-office-docs').then(mod => mod.default), {
+  ssr: false,
+  loading: () => <div>Loading office preview...</div>
+}) as any
 
 const OfficePreview: FC<{ file: OdFileObject }> = ({ file }) => {
   const { asPath } = useRouter()

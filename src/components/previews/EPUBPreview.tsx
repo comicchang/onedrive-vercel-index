@@ -1,7 +1,7 @@
 import type { OdFileObject } from '../../types'
 
 import { FC, useEffect, useRef, useState } from 'react'
-import { ReactReader } from 'react-reader'
+import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
 
@@ -9,6 +9,11 @@ import Loading from '../Loading'
 import DownloadButtonGroup from '../DownloadBtnGtoup'
 import { DownloadBtnContainer } from './Containers'
 import { getStoredToken } from '../../utils/protectedRouteHandler'
+
+const ReactReader = dynamic(() => import('react-reader').then(mod => mod.ReactReader), {
+  ssr: false,
+  loading: () => <div>Loading EPUB reader...</div>
+})
 
 const EPUBPreview: FC<{ file: OdFileObject }> = ({ file }) => {
   const { asPath } = useRouter()

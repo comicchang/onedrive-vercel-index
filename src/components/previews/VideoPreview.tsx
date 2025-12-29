@@ -3,10 +3,10 @@ import type { OdFileObject } from '../../types'
 import { FC, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
+import dynamic from 'next/dynamic'
 
 import axios from 'axios'
 import toast from 'react-hot-toast'
-import { Plyr } from 'plyr-react'
 import { useAsync } from 'react-async-hook'
 import { useClipboard } from 'use-clipboard-copy'
 
@@ -21,6 +21,11 @@ import Loading from '../Loading'
 import CustomEmbedLinkMenu from '../CustomEmbedLinkMenu'
 
 import 'plyr-react/plyr.css'
+
+const Plyr = dynamic(() => import('plyr-react').then(mod => mod.Plyr), {
+  ssr: false,
+  loading: () => <div>Loading video player...</div>
+})
 
 const VideoPlayer: FC<{
   videoName: string

@@ -5,7 +5,7 @@ import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import rehypeRaw from 'rehype-raw'
 import { useTranslation } from 'next-i18next'
-import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter'
+import dynamic from 'next/dynamic'
 import { tomorrowNight } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
 import 'katex/dist/katex.min.css'
@@ -15,6 +15,11 @@ import FourOhFour from '../FourOhFour'
 import Loading from '../Loading'
 import DownloadButtonGroup from '../DownloadBtnGtoup'
 import { DownloadBtnContainer, PreviewContainer } from './Containers'
+
+const SyntaxHighlighter = dynamic(() => import('react-syntax-highlighter').then(mod => mod.LightAsync), {
+  ssr: false,
+  loading: () => <div>Loading syntax highlighter...</div>
+})
 
 const MarkdownPreview: FC<{
   file: any
