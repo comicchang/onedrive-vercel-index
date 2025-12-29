@@ -39,7 +39,7 @@
     "react": "^19.0.0",
     "react-async-hook": "^4.0.0",
     "react-audio-player": "^0.17.0",
-    "react-cookie": "^7.0.2",
+    "react-cookie": "^8.0.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.4.1",
