@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import nextI18NextConfig from '../next-i18next.config'
+import nextI18NextConfig from '../../next-i18next.config'
 
-import siteConfig from '../config/site.config'
+import siteConfig from '../../config/site.config'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
