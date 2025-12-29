@@ -26,8 +26,6 @@ import Loading, { LoadingIcon } from './Loading'
 import FourOhFour from './FourOhFour'
 import Auth from './Auth'
 import TextPreview from './previews/TextPreview'
-import MarkdownPreview from './previews/MarkdownPreview'
-import CodePreview from './previews/CodePreview'
 import OfficePreview from './previews/OfficePreview'
 import AudioPreview from './previews/AudioPreview'
 import VideoPreview from './previews/VideoPreview'
@@ -42,6 +40,12 @@ import FolderGridLayout from './FolderGridLayout'
 
 // Disabling SSR for some previews
 const EPUBPreview = dynamic(() => import('./previews/EPUBPreview'), {
+  ssr: false,
+})
+const MarkdownPreview = dynamic(() => import('./previews/MarkdownPreview'), {
+  ssr: false,
+})
+const CodePreview = dynamic(() => import('./previews/CodePreview'), {
   ssr: false,
 })
 
