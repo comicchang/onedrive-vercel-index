@@ -4,7 +4,7 @@ import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import rehypeRaw from 'rehype-raw'
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'react-i18next'
 import dynamic from 'next/dynamic'
 import { tomorrowNight } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
