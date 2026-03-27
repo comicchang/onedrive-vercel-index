@@ -6,9 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .js,.ts,.jsx,.tsx",
+    "lint": "biome lint src/components src/pages src/utils src/types config *.config.js i18next.config.ts --diagnostic-level=error --skip=lint/a11y --skip=lint/style/useImportType --skip=lint/style/useNodejsImportProtocol --skip=lint/complexity/noUselessFragments --skip=lint/suspicious/noDoubleEquals --skip=lint/suspicious/noArrayIndexKey --skip=lint/security/noDangerouslySetInnerHtml",
     "format": "prettier 'src/**/*.{js,ts,jsx,tsx}' --write",
-    "extract": "i18next"
+    "extract": "i18next-cli extract"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
@@ -46,7 +46,6 @@
     "react-hotkeys-hook": "^5.2.1",
     "react-i18next": "^16.5.0",
     "react-markdown": "^10.1.0",
-    "react-reader": "^2.0.15",
     "react-syntax-highlighter": "^16.1.0",
     "react-use-system-theme": "^1.1.1",
     "rehype-katex": "^7.0.1",
@@ -54,10 +53,12 @@
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
     "swr": "^2.3.8",
+    "@intity/epub-js": "^0.3.96",
     "use-clipboard-copy": "^0.2.0",
     "use-constant": "^2.0.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.9",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/cors": "^2.8.19",
     "@types/crypto-js": "^4.2.2",
@@ -67,26 +68,11 @@
     "@types/react-dom": "^19.2.3",
     "@types/react-syntax-highlighter": "^15.5.13",
     "autoprefixer": "^10.4.23",
-    "eslint": "9.39.4",
-    "eslint-config-next": "16.2.1",
-    "eslint-config-prettier": "^10.1.8",
-    "i18next-parser": "^9.4.0",
+    "i18next-cli": "^1.51.3",
     "prettier": "^3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.18",
     "typescript": "6.0.2"
-  },
-  "pnpm": {
-    "overrides": {
-      "lodash@4.17.21": "4.17.23",
-      "minimatch@9.0.6": "9.0.7",
-      "flatted@3.3.3": "3.4.2",
-      "undici@7.22.0": "7.24.6",
-      "picomatch@2.3.1": "2.3.2",
-      "picomatch@4.0.3": "4.0.4",
-      "brace-expansion@5.0.3": "5.0.5",
-      "minimatch@3.1.5>brace-expansion": "file:packages/brace-expansion-compat"
-    }
   },
   "prettier": {
     "printWidth": 120,

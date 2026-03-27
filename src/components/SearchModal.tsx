@@ -50,7 +50,7 @@ function useDriveItemSearch() {
     const { data } = await axios.get<OdSearchResult>(`/api/search/?q=${q}`)
 
     // Map parentReference to the absolute path of the search result
-    data.map(item => {
+    data.forEach(item => {
       item['path'] =
         'path' in item.parentReference
           ? // OneDrive International have the path returned in the parentReference field
