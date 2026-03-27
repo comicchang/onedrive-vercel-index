@@ -14,7 +14,7 @@ const parseDotUrl = (content: string): string | undefined => {
     ?.split('=')[1]
 }
 
-const TextPreview = ({ file }) => {
+const TextPreview: React.FC<{ file: unknown }> = () => {
   const { asPath } = useRouter()
   const { t } = useTranslation()
 

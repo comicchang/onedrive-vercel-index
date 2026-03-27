@@ -7,7 +7,7 @@ import DownloadButtonGroup from '../DownloadBtnGtoup'
 import useFileContent from '../../utils/fetchOnMount'
 import { DownloadBtnContainer, PreviewContainer } from './Containers'
 
-const TextPreview = ({ file }) => {
+const TextPreview: React.FC<{ file: unknown }> = () => {
   const { asPath } = useRouter()
   const { t } = useTranslation()
 

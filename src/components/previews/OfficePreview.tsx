@@ -13,7 +13,7 @@ const Preview = dynamic(() => import('preview-office-docs').then(mod => mod.defa
   loading: () => <div>Loading office preview...</div>
 }) as any
 
-const OfficePreview: FC<{ file: OdFileObject }> = ({ file }) => {
+const OfficePreview: FC<{ file: OdFileObject }> = () => {
   const { asPath } = useRouter()
   const hashedToken = getStoredToken(asPath)
 

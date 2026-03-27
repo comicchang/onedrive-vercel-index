@@ -1,4 +1,5 @@
-import { FC, CSSProperties, ReactNode } from 'react'
+/* eslint-disable @next/next/no-img-element */
+import { FC } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
@@ -85,7 +86,7 @@ const MarkdownPreview: FC<{
                 )
               },
               code(props) {
-                const { children, className, node, ref, ...rest } = props
+                const { children, className, ...rest } = props
                 const match = /language-(\w+)/.exec(className || '')
                 return match ? (
                   <SyntaxHighlighter {...rest} PreTag="div" language={match[1]} style={tomorrowNight}>

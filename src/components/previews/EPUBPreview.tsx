@@ -1,5 +1,4 @@
 import type { OdFileObject } from '../../types'
-
 import { FC, useEffect, useRef, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
@@ -15,7 +14,7 @@ const ReactReader = dynamic(() => import('react-reader').then(mod => mod.ReactRe
   loading: () => <div>Loading EPUB reader...</div>
 })
 
-const EPUBPreview: FC<{ file: OdFileObject }> = ({ file }) => {
+const EPUBPreview: FC<{ file: OdFileObject }> = () => {
   const { asPath } = useRouter()
   const hashedToken = getStoredToken(asPath)
 

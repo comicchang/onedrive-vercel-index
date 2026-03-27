@@ -78,7 +78,7 @@ export default function OAuthStep3({ accessToken, expiryTime, refreshToken, erro
           router.push('/')
         }, 2000)
       })
-      .catch(_ => {
+      .catch(() => {
         setButtonError(true)
         setButtonContent(
           <div>

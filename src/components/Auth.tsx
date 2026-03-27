@@ -13,7 +13,7 @@ const Auth: FC<{ redirect: string }> = ({ redirect }) => {
 
   const router = useRouter()
   const [token, setToken] = useState('')
-  const [_, setPersistedToken] = useLocalStorage(authTokenPath, '')
+  const [, setPersistedToken] = useLocalStorage(authTokenPath, '')
 
   const { t } = useTranslation()
 

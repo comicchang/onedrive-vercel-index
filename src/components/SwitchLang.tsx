@@ -41,7 +41,7 @@ const localeText = (locale: string): string => {
 const SwitchLang = () => {
   const { locales, pathname, query, asPath } = useRouter()
 
-  const [_, setCookie] = useCookies(['NEXT_LOCALE'])
+  const [, setCookie] = useCookies(['NEXT_LOCALE'])
 
   return (
     <div className="relative">
