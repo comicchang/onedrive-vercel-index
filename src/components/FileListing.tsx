@@ -104,7 +104,7 @@ export const Checkbox: FC<{
         ref.current.indeterminate = checked == 1
       }
     }
-  }, [ref, checked, indeterminate])
+  }, [checked, indeterminate])
 
   const handleClick: MouseEventHandler = e => {
     if (ref.current) {
