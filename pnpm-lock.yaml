@@ -97,7 +97,7 @@ importers:
         version: 0.17.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react-cookie:
         specifier: ^8.0.1
-        version: 8.0.1(@types/react@19.2.14)(react@19.2.4)
+        version: 8.1.0(@types/react@19.2.14)(react@19.2.4)
       react-copy-to-clipboard:
         specifier: ^5.1.0
         version: 5.1.1(react@19.2.4)
@@ -2203,8 +2203,8 @@ packages:
       react: '>=16'
       react-dom: '>=16'
 
-  react-cookie@8.0.1:
-    resolution: {integrity: sha512-QNdAd0MLuAiDiLcDU/2s/eyKmmfMHtjPUKJ2dZ/5CcQ9QKUium4B3o61/haq6PQl/YWFqC5PO8GvxeHKhy3GFA==}
+  react-cookie@8.1.0:
+    resolution: {integrity: sha512-Qs+gD3gpQmUXnJUZafhJtNWhhNdi8OYbOAF5YQRAZa/D171ILOIEMfXDz/tmhkE+nOthllmqryHH6I/qmvIYWQ==}
     peerDependencies:
       react: '>= 16.3.0'
 
@@ -2495,8 +2495,8 @@ packages:
   unist-util-visit@5.0.0:
     resolution: {integrity: sha512-MR04uvD+07cwl/yhVuVWAtw+3GOR/knlL55Nd/wAdblk27GCVt3lqpTivy/tkJcZoNPzTwS1Y+KMojlLDhoTzg==}
 
-  universal-cookie@8.0.1:
-    resolution: {integrity: sha512-B6ks9FLLnP1UbPPcveOidfvB9pHjP+wekP2uRYB9YDfKVpvcjKgy1W5Zj+cEXJ9KTPnqOKGfVDQBmn8/YCQfRg==}
+  universal-cookie@8.1.0:
+    resolution: {integrity: sha512-65+kikQAWq7gsJbirwB7dk6e8xeug1hx3++x2dQoymdXcV7fYv0yChOgHCg01ZwP3fE3sYeq6EWCSpFv3HLl9g==}
 
   update-browserslist-db@1.2.3:
     resolution: {integrity: sha512-Js0m9cx+qOgDxo0eMiFGEueWztz+d4+M3rGlmKPT+T4IS/jP4ylw3Nwpu6cpTTP8R1MAC1kF4VbdLt3ARf209w==}
@@ -4677,12 +4677,12 @@ snapshots:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
 
-  react-cookie@8.0.1(@types/react@19.2.14)(react@19.2.4):
+  react-cookie@8.1.0(@types/react@19.2.14)(react@19.2.4):
     dependencies:
       '@types/hoist-non-react-statics': 3.3.7(@types/react@19.2.14)
       hoist-non-react-statics: 3.3.2
       react: 19.2.4
-      universal-cookie: 8.0.1
+      universal-cookie: 8.1.0
     transitivePeerDependencies:
       - '@types/react'
 
@@ -5040,7 +5040,7 @@ snapshots:
       unist-util-is: 6.0.1
       unist-util-visit-parents: 6.0.2
 
-  universal-cookie@8.0.1:
+  universal-cookie@8.1.0:
     dependencies:
       cookie: 1.1.1
 
