@@ -176,7 +176,7 @@ importers:
         version: 10.4.27(postcss@8.5.8)
       i18next-cli:
         specifier: ^1.51.3
-        version: 1.51.4(@swc/helpers@0.5.18)(@types/node@24.12.0)(i18next@25.10.10(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(typescript@6.0.2)
+        version: 1.51.5(@swc/helpers@0.5.18)(@types/node@24.12.0)(i18next@25.10.10(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(typescript@6.0.2)
       prettier:
         specifier: ^3.7.4
         version: 3.8.1
@@ -1547,8 +1547,8 @@ packages:
     resolution: {integrity: sha512-eKCa6bwnJhvxj14kZk5NCPc6Hb6BdsU9DZcOnmQKSnO1VKrfV0zCvtttPZUsBvjmNDn8rpcJfpwSYnHBjc95MQ==}
     engines: {node: '>=18.18.0'}
 
-  i18next-cli@1.51.4:
-    resolution: {integrity: sha512-7VR1AIqVj4vuTu0vdbX6TG85Zh4IiwtQtlHSQdtDxLVDUpQB3pnJzjWmUPmOcV1iPcIVkJhYq9BnTc1L91bWbA==}
+  i18next-cli@1.51.5:
+    resolution: {integrity: sha512-WjNfP2D61NjxH9KNpsCq0dg6PRcSo4ZWxEx6MawiX/ZXIB8QeKVQEMFGe+5mP+1QN88Wz5Zgopjll1WXB4g/kg==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -2247,10 +2247,10 @@ packages:
       typescript:
         optional: true
 
-  react-i18next@17.0.0:
-    resolution: {integrity: sha512-L7aqwOePCExt6nlF7000lN2YKWnR7IpSpQId9sj01798Xn3LAncBdTHKl9lA/nr+YrG78BTqWPJxq9mlrrmH7Q==}
+  react-i18next@17.0.1:
+    resolution: {integrity: sha512-iG65FGnFHcYyHNuT01ukffYWCOBFTWSdVD8EZd/dCVWgtjFPObcSsvYYNwcsokO/rDcTb5d6D8Acv8MrOdm6Hw==}
     peerDependencies:
-      i18next: '>= 25.10.10'
+      i18next: '>= 26.0.1'
       react: '>= 16.8.0'
       react-dom: '*'
       react-native: '*'
@@ -3846,7 +3846,7 @@ snapshots:
 
   human-signals@8.0.1: {}
 
-  i18next-cli@1.51.4(@swc/helpers@0.5.18)(@types/node@24.12.0)(i18next@25.10.10(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(typescript@6.0.2):
+  i18next-cli@1.51.5(@swc/helpers@0.5.18)(@types/node@24.12.0)(i18next@25.10.10(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(typescript@6.0.2):
     dependencies:
       '@croct/json5-parser': 0.2.2
       '@swc/core': 1.15.21(@swc/helpers@0.5.18)
@@ -3862,7 +3862,7 @@ snapshots:
       minimatch: 10.2.4
       ora: 9.3.0
       react: 19.2.4
-      react-i18next: 17.0.0(i18next@25.10.10(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@6.0.2)
+      react-i18next: 17.0.1(i18next@25.10.10(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@6.0.2)
       yaml: 2.8.3
     transitivePeerDependencies:
       - '@swc/helpers'
@@ -4720,7 +4720,7 @@ snapshots:
       react-dom: 19.2.4(react@19.2.4)
       typescript: 6.0.2
 
-  react-i18next@17.0.0(i18next@25.10.10(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@6.0.2):
+  react-i18next@17.0.1(i18next@25.10.10(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@6.0.2):
     dependencies:
       '@babel/runtime': 7.29.2
       html-parse-stringify: 3.0.1
