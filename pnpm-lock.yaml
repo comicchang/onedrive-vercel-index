@@ -76,7 +76,7 @@ importers:
         version: 16.2.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       next-i18next:
         specifier: ^16.0.0
-        version: 16.0.4(@types/react@19.2.14)(i18next@25.10.10(typescript@6.0.2))(next@16.2.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-i18next@16.6.6(i18next@25.10.10(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@6.0.2))(react@19.2.4)
+        version: 16.0.5(@types/react@19.2.14)(i18next@25.10.10(typescript@6.0.2))(next@16.2.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-i18next@16.6.6(i18next@25.10.10(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@6.0.2))(react@19.2.4)
       nextjs-progressbar:
         specifier: ^0.0.16
         version: 0.0.16(next@16.2.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
@@ -1966,8 +1966,8 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  next-i18next@16.0.4:
-    resolution: {integrity: sha512-N1M4lG1y/e8g93bfE9LowXKno+gYBkSBNKx/8W2o2C0StW6C9ZhOjoIYt8yusGrONHcVHjVCtdgcU0TUiRNxwQ==}
+  next-i18next@16.0.5:
+    resolution: {integrity: sha512-f9+WycNPxG5ruto1jacLZxlTJGsHGy312x4FpiE3ZUgE5K5peEJedQNBR/TSzkYqmvQ3kCqc94JKbjU88iP+LA==}
     engines: {node: '>=20'}
     peerDependencies:
       i18next: '>= 23.7.13'
@@ -4486,7 +4486,7 @@ snapshots:
 
   nanoid@3.3.11: {}
 
-  next-i18next@16.0.4(@types/react@19.2.14)(i18next@25.10.10(typescript@6.0.2))(next@16.2.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-i18next@16.6.6(i18next@25.10.10(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@6.0.2))(react@19.2.4):
+  next-i18next@16.0.5(@types/react@19.2.14)(i18next@25.10.10(typescript@6.0.2))(next@16.2.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-i18next@16.6.6(i18next@25.10.10(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@6.0.2))(react@19.2.4):
     dependencies:
       '@types/hoist-non-react-statics': 3.3.7(@types/react@19.2.14)
       hoist-non-react-statics: 3.3.2
