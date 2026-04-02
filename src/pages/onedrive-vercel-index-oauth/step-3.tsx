@@ -103,7 +103,7 @@ export default function OAuthStep3({ accessToken, expiryTime, refreshToken, erro
           <div className="rounded bg-white p-3 dark:bg-gray-900 dark:text-gray-100">
             <div className="mx-auto w-52">
               <Image
-                src="/images/fabulous-celebration.png"
+                src="/images/fabulous-celebration.webp"
                 width={912}
                 height={912}
                 alt="fabulous celebration"

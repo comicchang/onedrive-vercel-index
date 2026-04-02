@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "biome lint src/components src/pages src/utils src/types config *.config.js i18next.config.ts --diagnostic-level=error --skip=lint/a11y --skip=lint/style/useImportType --skip=lint/style/useNodejsImportProtocol --skip=lint/complexity/noUselessFragments --skip=lint/suspicious/noDoubleEquals --skip=lint/suspicious/noArrayIndexKey --skip=lint/security/noDangerouslySetInnerHtml",
+    "lint": "biome lint src/components src/pages src/utils src/types config *.config.js i18next.config.ts --diagnostic-level=error --skip=lint/a11y --skip=lint/complexity/noUselessFragments --skip=lint/suspicious/noArrayIndexKey --skip=lint/security/noDangerouslySetInnerHtml",
     "format": "prettier 'src/**/*.{js,ts,jsx,tsx}' --write",
     "extract": "i18next-cli extract"
   },

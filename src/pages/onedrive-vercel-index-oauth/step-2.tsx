@@ -37,7 +37,7 @@ export default function OAuthStep2() {
           <div className="rounded bg-white p-3 dark:bg-gray-900 dark:text-gray-100">
             <div className="mx-auto w-52">
               <Image
-                src="/images/fabulous-come-back-later.png"
+                src="/images/fabulous-come-back-later.webp"
                 width={912}
                 height={912}
                 alt="fabulous come back later"
@@ -83,7 +83,7 @@ export default function OAuthStep2() {
             </p>
 
             <div className="my-4 mx-auto w-2/3 overflow-hidden rounded">
-              <Image src="/images/step-2-screenshot.png" width={1466} height={607} alt="step 2 screenshot" />
+              <Image src="/images/step-2-screenshot.webp" width={1466} height={607} alt="step 2 screenshot" />
             </div>
 
             <input

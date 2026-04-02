@@ -48,17 +48,21 @@ function useDriveItemSearch() {
   const searchDriveItem = async (q: string) => {
     const { data } = await axios.get<OdSearchResult>(`/api/search/?q=${q}`)
 
-    // Map parentReference to the absolute path of the search result
-    data.forEach(item => {
-      item['path'] =
-        'path' in item.parentReference
-          ? // OneDrive International have the path returned in the parentReference field
-            `${mapAbsolutePath(item.parentReference.path)}/${encodeURIComponent(item.name)}`
-          : // OneDrive for Business/Education does not, so we need extra steps here
-            ''
-    })
-
+    // Map parentReference to the absolute path of the search result,
+    // and filter out items outside baseDirectory (Graph search may return results from entire drive)
+    const baseDir = siteConfig.baseDirectory === '/' ? '' : siteConfig.baseDirectory
     return data
+      .filter(item => {
+        if (!('path' in item.parentReference)) return true
+        return baseDir === '' || item.parentReference.path.includes(baseDir)
+      })
+      .map(item => ({
+        ...item,
+        path:
+          'path' in item.parentReference
+            ? `${mapAbsolutePath(item.parentReference.path)}/${encodeURIComponent(item.name)}`
+            : '',
+      }))
   }
 
   const debouncedDriveItemSearch = useDebouncedCallback(searchDriveItem, 1000)
@@ -210,7 +214,7 @@ export default function SearchModal({
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <div className="my-12 inline-block w-full max-w-3xl transform overflow-hidden rounded border border-gray-400/30 text-left shadow-xl transition-all">
+            <div className="relative my-12 inline-block w-full max-w-3xl transform overflow-hidden rounded border border-gray-400/30 text-left shadow-xl transition-all">
               <Dialog.Title
                 as="h3"
                 className="flex items-center space-x-4 border-b border-gray-400/30 bg-gray-50 p-4 dark:bg-gray-800 dark:text-white"
@@ -219,6 +223,7 @@ export default function SearchModal({
                 <input
                   type="text"
                   id="search-box"
+                  autoFocus
                   className="w-full bg-transparent focus:outline-none focus-visible:outline-none"
                   placeholder={t('Search ...')}
                   value={query}
