@@ -1,12 +1,11 @@
 import type { OdFileObject } from '../../types'
 import { FC, useEffect, useRef, useState } from 'react'
-import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 
 import Loading from '../Loading'
 import DownloadButtonGroup from '../DownloadBtnGroup'
 import { DownloadBtnContainer } from './Containers'
-import { getStoredToken } from '../../utils/protectedRouteHandler'
+import { useRawUrl } from '../../utils/useRawUrl'
 import type Book from '@intity/epub-js/types/book'
 import type { BookOptions } from '@intity/epub-js/types/book'
 import type Rendition from '@intity/epub-js/types/rendition'
@@ -19,8 +18,7 @@ type BookWithSpine = Book & {
 }
 
 const EPUBPreview: FC<{ file: OdFileObject }> = () => {
-  const { asPath } = useRouter()
-  const hashedToken = getStoredToken(asPath)
+  const { asPath, rawUrl } = useRawUrl()
   const { t } = useTranslation()
   const epubContainer = useRef<HTMLDivElement>(null)
   const [loading, setLoading] = useState(true)
@@ -37,7 +35,7 @@ const EPUBPreview: FC<{ file: OdFileObject }> = () => {
       try {
         const module = await import('@intity/epub-js')
         const ePub = (module.default ?? module) as unknown as (url?: string, options?: BookOptions) => Book
-        const url = `/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`
+        const url = rawUrl()
         const renditionOptions: Partial<RenditionOptions> = {
           width: '100%',
           height: '100%',
@@ -86,7 +84,7 @@ const EPUBPreview: FC<{ file: OdFileObject }> = () => {
       rendition?.destroy?.()
       book?.destroy?.()
     }
-  }, [asPath, hashedToken, t])
+  }, [asPath, rawUrl, t])
 
   return (
     <div>

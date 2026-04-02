@@ -1,7 +1,6 @@
 import type { OdFileObject } from '../../types'
 
 import { FC, useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 import dynamic from 'next/dynamic'
 
@@ -12,7 +11,7 @@ import { useClipboard } from '../../utils/useClipboard'
 
 import { getBaseUrl } from '../../utils/getBaseUrl'
 import { getExtension } from '../../utils/getFileIcon'
-import { getStoredToken } from '../../utils/protectedRouteHandler'
+import { useRawUrl } from '../../utils/useRawUrl'
 
 import { DownloadButton } from '../DownloadBtnGroup'
 import { DownloadBtnContainer, PreviewContainer } from './Containers'
@@ -79,22 +78,18 @@ const VideoPlayer: FC<{
 }
 
 const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
-  const { asPath } = useRouter()
-  const hashedToken = getStoredToken(asPath)
+  const { asPath, hashedToken, rawUrl } = useRawUrl()
   const clipboard = useClipboard()
 
   const [menuOpen, setMenuOpen] = useState(false)
   const { t } = useTranslation()
 
-  // OneDrive generates thumbnails for its video files, we pick the thumbnail with the highest resolution
   const thumbnail = `/api/thumbnail/?path=${asPath}&size=large${hashedToken ? `&odpt=${hashedToken}` : ''}`
 
-  // We assume subtitle files are beside the video with the same name, only webvtt '.vtt' files are supported
   const vtt = `${asPath.substring(0, asPath.lastIndexOf('.'))}.vtt`
-  const subtitle = `/api/raw/?path=${vtt}${hashedToken ? `&odpt=${hashedToken}` : ''}`
+  const subtitle = rawUrl(vtt)
 
-  // We also format the raw video file for the in-browser player as well as all other players
-  const videoUrl = `/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`
+  const videoUrl = rawUrl()
 
   const isFlv = getExtension(file.name) === 'flv'
   const {
@@ -139,7 +134,7 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
           />
           <DownloadButton
             onClickCallback={() => {
-              clipboard.copy(`${getBaseUrl()}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)
+              clipboard.copy(`${getBaseUrl()}${rawUrl()}`)
               toast.success(t('Copied direct link to clipboard.'))
             }}
             btnColor="pink"
