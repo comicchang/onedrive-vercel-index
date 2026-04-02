@@ -20,7 +20,7 @@ const Auth: FC<{ redirect: string }> = ({ redirect }) => {
   return (
     <div className="mx-auto flex max-w-sm flex-col space-y-4 md:my-10">
       <div className="mx-auto w-3/4 md:w-5/6">
-        <Image src={'/images/fabulous-wapmire-weekdays.png'} alt="authenticate" width={912} height={912} priority />
+        <Image src={'/images/fabulous-wapmire-weekdays.webp'} alt="authenticate" width={912} height={912} priority />
       </div>
       <div className="text-lg font-bold text-gray-900 dark:text-gray-100">{t('Enter Password')}</div>
 

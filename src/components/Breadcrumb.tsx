@@ -36,7 +36,7 @@ const Breadcrumb: React.FC<{ query?: ParsedUrlQuery }> = ({ query }) => {
                     .join('/')}`}
                   passHref
                   className={`ml-1 transition-all duration-75 hover:opacity-70 md:ml-3 ${
-                    i == 0 && 'pointer-events-none opacity-80'
+                    i === 0 && 'pointer-events-none opacity-80'
                   }`}
                 >
                   {p}
