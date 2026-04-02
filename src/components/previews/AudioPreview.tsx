@@ -4,13 +4,11 @@ import { FC, useEffect, useRef, useState } from 'react'
 import ReactAudioPlayer from 'react-audio-player'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
-import { useRouter } from 'next/router'
-
 import DownloadButtonGroup from '../DownloadBtnGroup'
 import { DownloadBtnContainer, PreviewContainer } from './Containers'
 import { LoadingIcon } from '../Loading'
 import { formatModifiedDateTime } from '../../utils/fileDetails'
-import { getStoredToken } from '../../utils/protectedRouteHandler'
+import { useRawUrl } from '../../utils/useRawUrl'
 
 enum PlayerState {
   Loading,
@@ -21,8 +19,7 @@ enum PlayerState {
 
 const AudioPreview: FC<{ file: OdFileObject }> = ({ file }) => {
   const { t } = useTranslation()
-  const { asPath } = useRouter()
-  const hashedToken = getStoredToken(asPath)
+  const { asPath, hashedToken, rawUrl } = useRawUrl()
 
   const rapRef = useRef<ReactAudioPlayer>(null)
   const [playerStatus, setPlayerStatus] = useState(PlayerState.Loading)
@@ -96,7 +93,7 @@ const AudioPreview: FC<{ file: OdFileObject }> = ({ file }) => {
 
             <ReactAudioPlayer
               className="h-11 w-full"
-              src={`/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
+              src={rawUrl()}
               ref={rapRef}
               controls
               preload="auto"

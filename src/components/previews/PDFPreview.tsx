@@ -1,16 +1,12 @@
-import { useRouter } from 'next/router'
 import { getBaseUrl } from '../../utils/getBaseUrl'
-import { getStoredToken } from '../../utils/protectedRouteHandler'
+import { useRawUrl } from '../../utils/useRawUrl'
 import DownloadButtonGroup from '../DownloadBtnGroup'
 import { DownloadBtnContainer } from './Containers'
 
 const PDFEmbedPreview: React.FC<{ file: unknown }> = () => {
-  const { asPath } = useRouter()
-  const hashedToken = getStoredToken(asPath)
+  const { rawUrl } = useRawUrl()
 
-  const pdfPath = encodeURIComponent(
-    `${getBaseUrl()}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`
-  )
+  const pdfPath = encodeURIComponent(`${getBaseUrl()}${rawUrl()}`)
   const url = `https://mozilla.github.io/pdf.js/web/viewer.html?file=${pdfPath}`
 
   return (
