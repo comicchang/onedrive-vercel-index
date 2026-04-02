@@ -3,7 +3,7 @@ import { FC, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import dynamic from 'next/dynamic'
 
-import DownloadButtonGroup from '../DownloadBtnGtoup'
+import DownloadButtonGroup from '../DownloadBtnGroup'
 import { DownloadBtnContainer } from './Containers'
 import { getBaseUrl } from '../../utils/getBaseUrl'
 import { getStoredToken } from '../../utils/protectedRouteHandler'

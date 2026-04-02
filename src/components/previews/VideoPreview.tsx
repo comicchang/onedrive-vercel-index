@@ -8,13 +8,13 @@ import dynamic from 'next/dynamic'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { useAsync } from 'react-async-hook'
-import { useClipboard } from 'use-clipboard-copy'
+import { useClipboard } from '../../utils/useClipboard'
 
 import { getBaseUrl } from '../../utils/getBaseUrl'
 import { getExtension } from '../../utils/getFileIcon'
 import { getStoredToken } from '../../utils/protectedRouteHandler'
 
-import { DownloadButton } from '../DownloadBtnGtoup'
+import { DownloadButton } from '../DownloadBtnGroup'
 import { DownloadBtnContainer, PreviewContainer } from './Containers'
 import FourOhFour from '../FourOhFour'
 import Loading from '../Loading'
@@ -62,7 +62,7 @@ const VideoPlayer: FC<{
   }, [videoUrl, isFlv, mpegts, subtitle])
 
   // Common plyr configs, including the video source and plyr options
-  const plyrSource = {
+  const plyrSource: Record<string, unknown> = {
     type: 'video',
     title: videoName,
     poster: thumbnail,
@@ -73,10 +73,9 @@ const VideoPlayer: FC<{
     fullscreen: { iosNative: true },
   }
   if (!isFlv) {
-    // If the video is not in flv format, we can use the native plyr and add sources directly with the video URL
     plyrSource['sources'] = [{ src: videoUrl }]
   }
-  return <Plyr id="plyr" source={plyrSource as Plyr.SourceInfo} options={plyrOptions} />
+  return <Plyr id="plyr" source={plyrSource as unknown as Plyr.SourceInfo} options={plyrOptions} />
 }
 
 const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {

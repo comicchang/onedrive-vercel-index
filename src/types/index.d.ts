@@ -53,6 +53,21 @@ export type OdThumbnail = {
   medium: { height: number; width: number; url: string }
   small: { height: number; width: number; url: string }
 }
+// Folder layout 组件共享 props 类型
+export type FolderLayoutProps = {
+  toast: typeof import('react-hot-toast').default
+  path: string
+  folderChildren: OdFolderChildren[]
+  selected: Record<string, boolean>
+  toggleItemSelected: (id: string) => void
+  totalSelected: 0 | 1 | 2
+  toggleTotalSelected: () => void
+  totalGenerating: boolean
+  handleSelectedDownload: () => void
+  folderGenerating: Record<string, boolean>
+  handleSelectedPermalink: (baseUrl: string) => string
+  handleFolderDownload: (path: string, id: string, name: string) => () => void
+}
 // API response object for /api/search/?q=<query>. Likewise, this array of items may also contain either files or folders.
 export type OdSearchResult = Array<{
   id: string

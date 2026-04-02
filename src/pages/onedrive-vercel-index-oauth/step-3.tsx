@@ -14,7 +14,9 @@ import Footer from '../../components/Footer'
 import { getAuthPersonInfo, requestTokenWithAuthCode, sendTokenToServer } from '../../utils/oAuthHandler'
 import { LoadingIcon } from '../../components/Loading'
 
-export default function OAuthStep3({ accessToken, expiryTime, refreshToken, error, description, errorUri }) {
+export default function OAuthStep3({ accessToken, expiryTime, refreshToken, error, description, errorUri }: {
+  accessToken: string; expiryTime: number; refreshToken: string; error: string; description: string; errorUri: string
+}) {
   const router = useRouter()
   const [expiryTimeLeft, setExpiryTimeLeft] = useState(expiryTime)
 
@@ -66,7 +68,7 @@ export default function OAuthStep3({ accessToken, expiryTime, refreshToken, erro
       return
     }
 
-    await sendTokenToServer(accessToken, refreshToken, expiryTime)
+    await sendTokenToServer(accessToken, refreshToken, String(expiryTime))
       .then(() => {
         setButtonError(false)
         setButtonContent(
@@ -224,7 +226,7 @@ export default function OAuthStep3({ accessToken, expiryTime, refreshToken, erro
   )
 }
 
-export async function getServerSideProps({ query, locale }) {
+export async function getServerSideProps({ query, locale }: { query: Record<string, string | string[] | undefined>; locale: string }) {
   const { authCode } = query
 
   // Return if no auth code is present
@@ -238,7 +240,7 @@ export async function getServerSideProps({ query, locale }) {
     }
   }
 
-  const response = await requestTokenWithAuthCode(authCode)
+  const response = await requestTokenWithAuthCode(authCode as string)
 
   // If error response, return invalid
   if ('error' in response) {

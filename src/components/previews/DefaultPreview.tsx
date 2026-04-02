@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 import { getFileIcon } from '../../utils/getFileIcon'
 import { formatModifiedDateTime, humanFileSize } from '../../utils/fileDetails'
 
-import DownloadButtonGroup from '../DownloadBtnGtoup'
+import DownloadButtonGroup from '../DownloadBtnGroup'
 import { DownloadBtnContainer, PreviewContainer } from './Containers'
 
 const DefaultPreview: FC<{ file: OdFileObject }> = ({ file }) => {

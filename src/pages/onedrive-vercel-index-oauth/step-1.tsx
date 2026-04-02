@@ -148,7 +148,7 @@ export default function OAuthStep1() {
   )
 }
 
-export async function getServerSideProps({ locale }) {
+export async function getServerSideProps({ locale }: { locale: string }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ['common'], nextI18NextConfig)),

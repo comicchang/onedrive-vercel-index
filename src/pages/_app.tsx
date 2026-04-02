@@ -3,7 +3,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import '../styles/globals.css'
 import '../styles/markdown-github.css'
 import { Analytics } from '@vercel/analytics/react';
-import { config, library } from '@fortawesome/fontawesome-svg-core'
+import { config, library, type IconDefinition } from '@fortawesome/fontawesome-svg-core'
 
 config.autoAddCss = false
 
@@ -68,7 +68,7 @@ import { CookiesProvider } from 'react-cookie'
 // import all brand icons with tree-shaking so all icons can be referenced in the app
 const iconList = Object.keys(Icons)
   .filter(k => k !== 'fab' && k !== 'prefix')
-  .map(icon => Icons[icon])
+  .map(icon => (Icons as unknown as Record<string, IconDefinition>)[icon])
 
 library.add(
   faFileImage,

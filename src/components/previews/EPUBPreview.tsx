@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 
 import Loading from '../Loading'
-import DownloadButtonGroup from '../DownloadBtnGtoup'
+import DownloadButtonGroup from '../DownloadBtnGroup'
 import { DownloadBtnContainer } from './Containers'
 import { getStoredToken } from '../../utils/protectedRouteHandler'
 import type Book from '@intity/epub-js/types/book'

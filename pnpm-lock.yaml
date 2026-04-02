@@ -29,15 +29,9 @@ importers:
       '@intity/epub-js':
         specifier: ^0.3.96
         version: 0.3.96
-      '@tailwindcss/line-clamp':
-        specifier: ^0.4.4
-        version: 0.4.4(tailwindcss@4.2.2)
       '@vercel/analytics':
         specifier: ^2.0.0
         version: 2.0.1(next@16.2.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)(vue-router@4.6.3(vue@3.5.25(typescript@6.0.2)))(vue@3.5.25(typescript@6.0.2))
-      awesome-debounce-promise:
-        specifier: ^2.1.0
-        version: 2.1.0
       axios:
         specifier: ^1.13.2
         version: 1.14.0
@@ -47,9 +41,6 @@ importers:
       crypto-js:
         specifier: ^4.2.0
         version: 4.2.0
-      csstype:
-        specifier: ^3.2.3
-        version: 3.2.3
       dayjs:
         specifier: ^1.11.19
         version: 1.11.20
@@ -98,9 +89,6 @@ importers:
       react-cookie:
         specifier: ^8.0.1
         version: 8.1.0(@types/react@19.2.14)(react@19.2.4)
-      react-copy-to-clipboard:
-        specifier: ^5.1.0
-        version: 5.1.1(react@19.2.4)
       react-dom:
         specifier: ^19.2.3
         version: 19.2.4(react@19.2.4)
@@ -119,9 +107,6 @@ importers:
       react-syntax-highlighter:
         specifier: ^16.1.0
         version: 16.1.1(react@19.2.4)
-      react-use-system-theme:
-        specifier: ^1.1.1
-        version: 1.1.1(react@19.2.4)
       rehype-katex:
         specifier: ^7.0.1
         version: 7.0.1
@@ -137,12 +122,6 @@ importers:
       swr:
         specifier: ^2.3.8
         version: 2.4.1(react@19.2.4)
-      use-clipboard-copy:
-        specifier: ^0.2.0
-        version: 0.2.0(react@19.2.4)
-      use-constant:
-        specifier: ^2.0.0
-        version: 2.0.0(react@19.2.4)
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.4.9
@@ -162,18 +141,12 @@ importers:
       '@types/react':
         specifier: 19.2.14
         version: 19.2.14
-      '@types/react-copy-to-clipboard':
-        specifier: ^5.0.7
-        version: 5.0.7
       '@types/react-dom':
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.14)
       '@types/react-syntax-highlighter':
         specifier: ^15.5.13
         version: 15.5.13
-      autoprefixer:
-        specifier: ^10.4.23
-        version: 10.4.27(postcss@8.5.8)
       i18next-cli:
         specifier: ^1.51.3
         version: 1.51.5(@swc/helpers@0.5.20)(@types/node@24.12.0)(i18next@26.0.3(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(typescript@6.0.2)
@@ -849,11 +822,6 @@ packages:
   '@swc/types@0.1.26':
     resolution: {integrity: sha512-lyMwd7WGgG79RS7EERZV3T8wMdmPq3xwyg+1nmAM64kIhx5yl+juO2PYIHb7vTiPgPCj8LYjsNV2T5wiQHUEaw==}
 
-  '@tailwindcss/line-clamp@0.4.4':
-    resolution: {integrity: sha512-5U6SY5z8N42VtrCrKlsTAA35gy2VSyYtHWCsg1H87NU1SXnEfekTVlrga9fzUDrrHcGi2Lb5KenUWb4lRQT5/g==}
-    peerDependencies:
-      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
-
   '@tailwindcss/node@4.2.2':
     resolution: {integrity: sha512-pXS+wJ2gZpVXqFaUEjojq7jzMpTGf8rU6ipJz5ovJV6PUGmlJ+jvIwGrzdHdQ80Sg+wmQxUFuoW1UAAwHNEdFA==}
 
@@ -961,9 +929,6 @@ packages:
   '@types/crypto-js@4.2.2':
     resolution: {integrity: sha512-sDOLlVbHhXpAUAL0YHDUUwDZf3iN4Bwi4W6a0W0b+QcAezUbRtH4FVb+9J4h+XFPW7l/gQ9F8qC7P+Ec4k8QVQ==}
 
-  '@types/debounce-promise@3.1.9':
-    resolution: {integrity: sha512-awNxydYSU+E2vL7EiOAMtiSOfL5gUM5X4YSE2A92qpxDJQ/rXz6oMPYBFDcDywlUmvIDI6zsqgq17cGm5CITQw==}
-
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
 
@@ -998,9 +963,6 @@ packages:
 
   '@types/prismjs@1.26.6':
     resolution: {integrity: sha512-vqlvI7qlMvcCBbVe0AKAb4f97//Hy0EBTaiW8AalRnG/xAN5zOiWWyrNqNXeq8+KAuvRewjCVY1+IPxk4RdNYw==}
-
-  '@types/react-copy-to-clipboard@5.0.7':
-    resolution: {integrity: sha512-Gft19D+as4M+9Whq1oglhmK49vqPhcLzk8WfvfLvaYMIPYanyfLy0+CwFucMJfdKoSFyySPmkkWn8/E6voQXjQ==}
 
   '@types/react-dom@19.2.3':
     resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
@@ -1093,28 +1055,9 @@ packages:
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
 
-  autoprefixer@10.4.27:
-    resolution: {integrity: sha512-NP9APE+tO+LuJGn7/9+cohklunJsXWiaWEfV3si4Gi/XHDwVNgkwr1J3RQYFIvPy76GmJ9/bW8vyoU1LcxwKHA==}
-    engines: {node: ^10 || ^12 || >=14}
-    hasBin: true
-    peerDependencies:
-      postcss: ^8.1.0
-
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
-
-  awesome-debounce-promise@2.1.0:
-    resolution: {integrity: sha512-0Dv4j2wKk5BrNZh4jgV2HUdznaeVgEK/WTvcHhZWUElhmQ1RR+iURRoLEwICFyR0S/5VtxfcvY6gR+qSe95jNg==}
-    engines: {node: '>=8', npm: '>=5'}
-
-  awesome-imperative-promise@1.0.1:
-    resolution: {integrity: sha512-EmPr3FqbQGqlNh+WxMNcF9pO9uDQJnOC4/3rLBQNH9m4E9qI+8lbfHCmHpVAsmGqPJPKhCjJLHUQzQW/RBHRdQ==}
-    engines: {node: '>=8', npm: '>=5'}
-
-  awesome-only-resolves-last-promise@1.0.3:
-    resolution: {integrity: sha512-7q4WPsYiD8Omvi/yHL314DkvsD/lM//Z2/KcU1vWk0xJotiV0GMJTgHTpWl3n90HJqpXKg7qX+VVNs5YbQyPRQ==}
-    engines: {node: '>=8', npm: '>=5'}
 
   axios@1.14.0:
     resolution: {integrity: sha512-3Y8yrqLSwjuzpXuZ0oIYZ/XGgLwUIBU3uLvbcpb0pidD9ctpShJd43KSlEEkVQg6DS0G9NKyzOvBfUtDKEyHvQ==}
@@ -1126,11 +1069,6 @@ packages:
     resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
     engines: {node: 18 || 20 || >=22}
 
-  baseline-browser-mapping@2.10.0:
-    resolution: {integrity: sha512-lIyg0szRfYbiy67j9KN8IyeD7q7hcmqnJ1ddWmNt19ItGpNN64mnllmxUNFIOdOm6by97jlL6wfpTTJrmnjWAA==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-
   baseline-browser-mapping@2.10.13:
     resolution: {integrity: sha512-BL2sTuHOdy0YT1lYieUxTw/QMtPBC3pmlJC6xk8BBYVv6vcw3SGdKemQ+Xsx9ik2F/lYDO9tqsFQH1r9PFuHKw==}
     engines: {node: '>=6.0.0'}
@@ -1139,11 +1077,6 @@ packages:
   brace-expansion@5.0.5:
     resolution: {integrity: sha512-VZznLgtwhn+Mact9tfiwx64fA9erHH/MCXEUfB/0bX/6Fz6ny5EGTXYltMocqg4xFAQZtnO3DHWWXi8RiuN7cQ==}
     engines: {node: 18 || 20 || >=22}
-
-  browserslist@4.28.1:
-    resolution: {integrity: sha512-ZC5Bd0LgJXgwGqUknZY/vkUQ04r8NXnJZ3yYi4vDmSiZmC/pdSN0NbNRPxZpbtO4uAfDUAFffO8IZoM3Gj8IkA==}
-    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
-    hasBin: true
 
   call-bind-apply-helpers@1.0.2:
     resolution: {integrity: sha512-Sp1ablJ0ivDkSzjcaJdxEunN5/XvksFJ2sMBFfq6x0ryhQV/2b/KwFe21cMpmHtPOSij8K99/wSfoEuTObmuMQ==}
@@ -1156,9 +1089,6 @@ packages:
   call-bound@1.0.4:
     resolution: {integrity: sha512-+ys997U96po4Kx/ABpBCqhA9EuxJaQWDQg7295H4hBphv3IZg0boBKuwYpt4YXp6MZ5AmZQnU/tyMTlRpaSejg==}
     engines: {node: '>= 0.4'}
-
-  caniuse-lite@1.0.30001774:
-    resolution: {integrity: sha512-DDdwPGz99nmIEv216hKSgLD+D4ikHQHjBC/seF98N9CPqRX4M5mSxT9eTV6oyisnJcuzxtZy4n17yKKQYmYQOA==}
 
   caniuse-lite@1.0.30001782:
     resolution: {integrity: sha512-dZcaJLJeDMh4rELYFw1tvSn1bhZWYFOt468FcbHHxx/Z/dFidd1I6ciyFdi3iwfQCyOjqo9upF6lGQYtMiJWxw==}
@@ -1204,9 +1134,6 @@ packages:
   client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
 
-  clipboard-copy@3.2.0:
-    resolution: {integrity: sha512-vooFaGFL6ulEP1liiaWFBmmfuPm3cY3y7T9eB83ZTnYc/oFeAKsq3NcDrOkBC8XaauEE8zHQwI7k0+JSYiVQSQ==}
-
   clsx@2.1.1:
     resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
     engines: {node: '>=6'}
@@ -1233,9 +1160,6 @@ packages:
   cookie@1.1.1:
     resolution: {integrity: sha512-ei8Aos7ja0weRpFzJnEA9UHJ/7XQmqglbRwnf2ATjcB9Wq874VKH9kfjjirM6UhU2/E5fFYadylyhFldcqSidQ==}
     engines: {node: '>=18'}
-
-  copy-to-clipboard@3.3.3:
-    resolution: {integrity: sha512-2KV8NhB5JqC3ky0r9PMCAZKbUHSwtEo4CwCs0KXgruG43gX5PMqDEBbVU4OUzw2MuAWUfsuFmWvEKG5QRfSnJA==}
 
   core-js@3.49.0:
     resolution: {integrity: sha512-es1U2+YTtzpwkxVLwAFdSpaIMyQaq0PBgm3YD1W3Qpsn1NAmO3KSgZfu+oGSWVu6NvLHoHCV/aYcsE5wiB7ALg==}
@@ -1266,9 +1190,6 @@ packages:
 
   dayjs@1.11.20:
     resolution: {integrity: sha512-YbwwqR/uYpeoP4pu043q+LTDLFBLApUP6VxRihdfNTqu4ubqMlGDLd6ErXhEgsyvY0K6nCs7nggYumAN+9uEuQ==}
-
-  debounce-promise@3.1.2:
-    resolution: {integrity: sha512-rZHcgBkbYavBeD9ej6sP56XfG53d51CD4dnaw989YX/nZ/ZJfgRx/9ePKmTNiUiyQvh4mtrMoS3OAWW+yoYtpg==}
 
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
@@ -1316,9 +1237,6 @@ packages:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
 
-  electron-to-chromium@1.5.302:
-    resolution: {integrity: sha512-sM6HAN2LyK82IyPBpznDRqlTQAtuSaO+ShzFiWTvoMJLHyZ+Y39r8VMfHzwbU8MVBzQ4Wdn85+wlZl2TLGIlwg==}
-
   emoji-regex@10.6.0:
     resolution: {integrity: sha512-toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A==}
 
@@ -1363,10 +1281,6 @@ packages:
   es6-symbol@3.1.4:
     resolution: {integrity: sha512-U9bFFjX8tFiATgtkJ1zg25+KviIXpgRvRHS8sau3GfhVzThRQrOeksPeT0BWW2MNZs1OEWJ1DPXOQMn0KKRkvg==}
     engines: {node: '>=0.12'}
-
-  escalade@3.2.0:
-    resolution: {integrity: sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==}
-    engines: {node: '>=6'}
 
   escape-string-regexp@5.0.0:
     resolution: {integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==}
@@ -1431,9 +1345,6 @@ packages:
   format@0.2.2:
     resolution: {integrity: sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==}
     engines: {node: '>=0.4.x'}
-
-  fraction.js@5.3.4:
-    resolution: {integrity: sha512-1X1NTtiJphryn/uLQz3whtY6jK3fTqoE3ohKs0tT+Ujr1W59oopxmoEh7Lu5p6vBaPbgoM0bzveAW4Qi5RyWDQ==}
 
   function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
@@ -2005,9 +1916,6 @@ packages:
       next: '>= 6.0.0'
       react: '>= 16.0.0'
 
-  node-releases@2.0.27:
-    resolution: {integrity: sha512-nmh3lCkYZ3grZvqcCH+fjmQ7X+H0OeZgP40OierEaAptX4XofMh5kwNbWh7lBduUzCcV/8kZ+NDLCwm2iorIlA==}
-
   npm-run-path@6.0.0:
     resolution: {integrity: sha512-9qny7Z9DsQU8Ou39ERsPU4OZQlSTP47ShQzuKZ6PRXpYLtIFgl/DEBYEXKlvcEa+9tHVcK8CF81Y2V72qaZhWA==}
     engines: {node: '>=18'}
@@ -2080,9 +1988,6 @@ packages:
   possible-typed-array-names@1.1.0:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
-
-  postcss-value-parser@4.2.0:
-    resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
   postcss@8.4.31:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
@@ -2208,11 +2113,6 @@ packages:
     peerDependencies:
       react: '>= 16.3.0'
 
-  react-copy-to-clipboard@5.1.1:
-    resolution: {integrity: sha512-s+HrzLyJBxrpGTYXF15dTgMjAJpEPZT/Yp6NytAtZMRngejxt6Pt5WrfFxLAcsqUDU6sY1Jz6tyHwIicE1U2Xg==}
-    peerDependencies:
-      react: '>=15.3.0'
-
   react-dom@19.2.4:
     resolution: {integrity: sha512-AXJdLo8kgMbimY95O2aKQqsz2iWi9jMgKJhRBAxECE4IFxfcazB2LmzloIoibJI3C12IlY20+KFaLv+71bUJeQ==}
     peerDependencies:
@@ -2261,11 +2161,6 @@ packages:
     engines: {node: '>= 16.20.2'}
     peerDependencies:
       react: '>= 0.14.0'
-
-  react-use-system-theme@1.1.1:
-    resolution: {integrity: sha512-Mlohol/QkEIbIKt8lXJP0iVvRAgOMml2iZ+bwvE1KpQFAG5DKJGFjZmEqebdj7WCu24u+34kpMtFDGMb4+5uSA==}
-    peerDependencies:
-      react: ^16.12.0
 
   react@19.2.4:
     resolution: {integrity: sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ==}
@@ -2428,9 +2323,6 @@ packages:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
     engines: {node: '>=6'}
 
-  toggle-selection@1.0.6:
-    resolution: {integrity: sha512-BiZS+C1OS8g/q2RRbJmy59xpyghNBqrr6k5L/uKBGRsTfxmu3ffiRnd8mlGPUVayg8pvfi5urfnu8TU7DVOkLQ==}
-
   trim-lines@3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
 
@@ -2482,24 +2374,8 @@ packages:
   universal-cookie@8.1.0:
     resolution: {integrity: sha512-65+kikQAWq7gsJbirwB7dk6e8xeug1hx3++x2dQoymdXcV7fYv0yChOgHCg01ZwP3fE3sYeq6EWCSpFv3HLl9g==}
 
-  update-browserslist-db@1.2.3:
-    resolution: {integrity: sha512-Js0m9cx+qOgDxo0eMiFGEueWztz+d4+M3rGlmKPT+T4IS/jP4ylw3Nwpu6cpTTP8R1MAC1kF4VbdLt3ARf209w==}
-    hasBin: true
-    peerDependencies:
-      browserslist: '>= 4.21.0'
-
   url-polyfill@1.1.14:
     resolution: {integrity: sha512-p4f3TTAG6ADVF3mwbXw7hGw+QJyw5CnNGvYh5fCuQQZIiuKUswqcznyV3pGDP9j0TSmC4UvRKm8kl1QsX1diiQ==}
-
-  use-clipboard-copy@0.2.0:
-    resolution: {integrity: sha512-f0PMMwZ2/Hh9/54L12capx4s6ASdd6edNJxg2OcqWVNM8BPvtOSmNFIN1Dg/q//fPp8MpUZceHfr7cnWOS0RxA==}
-    peerDependencies:
-      react: '>=16.8.0'
-
-  use-constant@2.0.0:
-    resolution: {integrity: sha512-Oy0aPHFuM0mMzxQy3wAx1/VVCOWU2dW+88J03/VrkxmpI0XojeHsryCR/6MlnZydb5KKcwj1oS4rZNwdeVo1sg==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   use-sync-external-store@1.6.0:
     resolution: {integrity: sha512-Pp6GSwGP/NrPIrxVFAIkOQeyw8lFenOHijQWkUTrDvrF4ALqylP2C/KCkeS9dpUM3KvYRQhna5vt7IL95+ZQ9w==}
@@ -3094,10 +2970,6 @@ snapshots:
     dependencies:
       '@swc/counter': 0.1.3
 
-  '@tailwindcss/line-clamp@0.4.4(tailwindcss@4.2.2)':
-    dependencies:
-      tailwindcss: 4.2.2
-
   '@tailwindcss/node@4.2.2':
     dependencies:
       '@jridgewell/remapping': 2.3.5
@@ -3181,8 +3053,6 @@ snapshots:
 
   '@types/crypto-js@4.2.2': {}
 
-  '@types/debounce-promise@3.1.9': {}
-
   '@types/debug@4.1.12':
     dependencies:
       '@types/ms': 2.1.0
@@ -3217,10 +3087,6 @@ snapshots:
   '@types/nprogress@0.2.3': {}
 
   '@types/prismjs@1.26.6': {}
-
-  '@types/react-copy-to-clipboard@5.0.7':
-    dependencies:
-      '@types/react': 19.2.14
 
   '@types/react-dom@19.2.3(@types/react@19.2.14)':
     dependencies:
@@ -3325,31 +3191,9 @@ snapshots:
 
   asynckit@0.4.0: {}
 
-  autoprefixer@10.4.27(postcss@8.5.8):
-    dependencies:
-      browserslist: 4.28.1
-      caniuse-lite: 1.0.30001774
-      fraction.js: 5.3.4
-      picocolors: 1.1.1
-      postcss: 8.5.8
-      postcss-value-parser: 4.2.0
-
   available-typed-arrays@1.0.7:
     dependencies:
       possible-typed-array-names: 1.1.0
-
-  awesome-debounce-promise@2.1.0:
-    dependencies:
-      '@types/debounce-promise': 3.1.9
-      awesome-imperative-promise: 1.0.1
-      awesome-only-resolves-last-promise: 1.0.3
-      debounce-promise: 3.1.2
-
-  awesome-imperative-promise@1.0.1: {}
-
-  awesome-only-resolves-last-promise@1.0.3:
-    dependencies:
-      awesome-imperative-promise: 1.0.1
 
   axios@1.14.0:
     dependencies:
@@ -3363,21 +3207,11 @@ snapshots:
 
   balanced-match@4.0.4: {}
 
-  baseline-browser-mapping@2.10.0: {}
-
   baseline-browser-mapping@2.10.13: {}
 
   brace-expansion@5.0.5:
     dependencies:
       balanced-match: 4.0.4
-
-  browserslist@4.28.1:
-    dependencies:
-      baseline-browser-mapping: 2.10.0
-      caniuse-lite: 1.0.30001774
-      electron-to-chromium: 1.5.302
-      node-releases: 2.0.27
-      update-browserslist-db: 1.2.3(browserslist@4.28.1)
 
   call-bind-apply-helpers@1.0.2:
     dependencies:
@@ -3395,8 +3229,6 @@ snapshots:
     dependencies:
       call-bind-apply-helpers: 1.0.2
       get-intrinsic: 1.3.0
-
-  caniuse-lite@1.0.30001774: {}
 
   caniuse-lite@1.0.30001782: {}
 
@@ -3428,8 +3260,6 @@ snapshots:
 
   client-only@0.0.1: {}
 
-  clipboard-copy@3.2.0: {}
-
   clsx@2.1.1: {}
 
   cluster-key-slot@1.1.2: {}
@@ -3445,10 +3275,6 @@ snapshots:
   commander@8.3.0: {}
 
   cookie@1.1.1: {}
-
-  copy-to-clipboard@3.3.3:
-    dependencies:
-      toggle-selection: 1.0.6
 
   core-js@3.49.0: {}
 
@@ -3477,8 +3303,6 @@ snapshots:
       type: 2.7.3
 
   dayjs@1.11.20: {}
-
-  debounce-promise@3.1.2: {}
 
   debug@4.4.3:
     dependencies:
@@ -3521,8 +3345,6 @@ snapshots:
       call-bind-apply-helpers: 1.0.2
       es-errors: 1.3.0
       gopd: 1.2.0
-
-  electron-to-chromium@1.5.302: {}
 
   emoji-regex@10.6.0: {}
 
@@ -3570,8 +3392,6 @@ snapshots:
     dependencies:
       d: 1.0.2
       ext: 1.7.0
-
-  escalade@3.2.0: {}
 
   escape-string-regexp@5.0.0: {}
 
@@ -3646,8 +3466,6 @@ snapshots:
       mime-types: 2.1.35
 
   format@0.2.2: {}
-
-  fraction.js@5.3.4: {}
 
   function-bind@1.1.2: {}
 
@@ -4516,8 +4334,6 @@ snapshots:
       prop-types: 15.8.1
       react: 19.2.4
 
-  node-releases@2.0.27: {}
-
   npm-run-path@6.0.0:
     dependencies:
       path-key: 4.0.0
@@ -4603,8 +4419,6 @@ snapshots:
 
   possible-typed-array-names@1.1.0: {}
 
-  postcss-value-parser@4.2.0: {}
-
   postcss@8.4.31:
     dependencies:
       nanoid: 3.3.11
@@ -4670,12 +4484,6 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  react-copy-to-clipboard@5.1.1(react@19.2.4):
-    dependencies:
-      copy-to-clipboard: 3.3.3
-      prop-types: 15.8.1
-      react: 19.2.4
-
   react-dom@19.2.4(react@19.2.4):
     dependencies:
       react: 19.2.4
@@ -4733,10 +4541,6 @@ snapshots:
       prismjs: 1.30.0
       react: 19.2.4
       refractor: 5.0.0
-
-  react-use-system-theme@1.1.1(react@19.2.4):
-    dependencies:
-      react: 19.2.4
 
   react@19.2.4: {}
 
@@ -4954,8 +4758,6 @@ snapshots:
 
   tapable@2.3.0: {}
 
-  toggle-selection@1.0.6: {}
-
   trim-lines@3.0.1: {}
 
   trough@2.2.0: {}
@@ -5017,22 +4819,7 @@ snapshots:
     dependencies:
       cookie: 1.1.1
 
-  update-browserslist-db@1.2.3(browserslist@4.28.1):
-    dependencies:
-      browserslist: 4.28.1
-      escalade: 3.2.0
-      picocolors: 1.1.1
-
   url-polyfill@1.1.14: {}
-
-  use-clipboard-copy@0.2.0(react@19.2.4):
-    dependencies:
-      clipboard-copy: 3.2.0
-      react: 19.2.4
-
-  use-constant@2.0.0(react@19.2.4):
-    dependencies:
-      react: 19.2.4
 
   use-sync-external-store@1.6.0(react@19.2.4):
     dependencies:

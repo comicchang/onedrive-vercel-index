@@ -103,7 +103,7 @@ const extensions = {
  * @param key The index key
  * @returns Whether or not the key exists inside the object
  */
-export function hasKey(obj: Record<string, any>, key: string): boolean {
+export function hasKey<T extends Record<string, unknown>>(obj: T, key: string): key is string & keyof T {
   return key in obj
 }
 

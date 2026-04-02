@@ -13,7 +13,7 @@ export const preview = {
   url: 'url',
 }
 
-export const extensions = {
+export const extensions: Record<string, string> = {
   gif: preview.image,
   jpeg: preview.image,
   jpg: preview.image,

@@ -2,7 +2,7 @@ import { Dispatch, Fragment, SetStateAction, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Dialog, Transition } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useClipboard } from 'use-clipboard-copy'
+import { useClipboard } from '../utils/useClipboard'
 
 import { getBaseUrl } from '../utils/getBaseUrl'
 import { getStoredToken } from '../utils/protectedRouteHandler'

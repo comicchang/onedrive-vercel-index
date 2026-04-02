@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
-import useSystemTheme from 'react-use-system-theme'
+import useSystemTheme from '../../utils/useSystemTheme'
 import { useRouter } from 'next/router'
 import dynamic from 'next/dynamic'
 
@@ -10,7 +10,7 @@ import useFileContent from '../../utils/fetchOnMount'
 import { getLanguageByFileName } from '../../utils/getPreviewType'
 import FourOhFour from '../FourOhFour'
 import Loading from '../Loading'
-import DownloadButtonGroup from '../DownloadBtnGtoup'
+import DownloadButtonGroup from '../DownloadBtnGroup'
 import { DownloadBtnContainer, PreviewContainer } from './Containers'
 
 const SyntaxHighlighter = dynamic(() => import('react-syntax-highlighter').then(mod => mod.LightAsync), {
