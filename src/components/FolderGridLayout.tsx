@@ -1,9 +1,9 @@
-import type { OdFolderChildren } from '../types'
+import type { OdFolderChildren, FolderLayoutProps } from '../types'
 
 import Link from 'next/link'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useClipboard } from 'use-clipboard-copy'
+import { useClipboard } from '../utils/useClipboard'
 import { useTranslation } from 'react-i18next'
 
 import { getBaseUrl } from '../utils/getBaseUrl'
@@ -67,7 +67,7 @@ const FolderGridLayout = ({
   handleSelectedPermalink,
   handleFolderDownload,
   toast,
-}) => {
+}: FolderLayoutProps) => {
   const clipboard = useClipboard()
   const hashedToken = getStoredToken(path)
 

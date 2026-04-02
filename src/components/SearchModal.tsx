@@ -1,9 +1,8 @@
 import axios from 'axios'
 import useSWR, { SWRResponse } from 'swr'
 import { Dispatch, Fragment, SetStateAction, useState } from 'react'
-import AwesomeDebouncePromise from 'awesome-debounce-promise'
 import { useAsync } from 'react-async-hook'
-import useConstant from 'use-constant'
+import { useDebouncedCallback } from '../utils/useDebouncedCallback'
 import { useTranslation } from 'react-i18next'
 
 import Link from 'next/link'
@@ -62,7 +61,7 @@ function useDriveItemSearch() {
     return data
   }
 
-  const debouncedDriveItemSearch = useConstant(() => AwesomeDebouncePromise(searchDriveItem, 1000))
+  const debouncedDriveItemSearch = useDebouncedCallback(searchDriveItem, 1000)
   const results = useAsync(async () => {
     if (query.length === 0) {
       return []

@@ -1,9 +1,10 @@
 import axios from 'axios'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-import { encodePath, getAccessToken } from '.'
+import { encodePath } from '.'
 import apiConfig from '../../../config/api.config'
 import siteConfig from '../../../config/site.config'
+import { requireAccessToken, apiErrorResponse } from '../../utils/apiMiddleware'
 
 /**
  * Sanitize the search query
@@ -26,37 +27,32 @@ function sanitiseQuery(query: string): string {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  // Get access token from storage
-  const accessToken = await getAccessToken()
+  const accessToken = await requireAccessToken(res)
+  if (!accessToken) return
 
-  // Query parameter from request
   const { q: searchQuery = '' } = req.query
 
-  // Set edge function caching for faster load times, check docs:
-  // https://vercel.com/docs/concepts/functions/edge-caching
   res.setHeader('Cache-Control', apiConfig.cacheControlHeader)
 
-  if (typeof searchQuery === 'string') {
-    // Construct Microsoft Graph Search API URL, and perform search only under the base directory
-    const searchRootPath = encodePath('/')
-    const encodedPath = searchRootPath === '' ? searchRootPath : searchRootPath + ':'
-
-    const searchApi = `${apiConfig.driveApi}/root${encodedPath}/search(q='${sanitiseQuery(searchQuery)}')`
-
-    try {
-      const { data } = await axios.get(searchApi, {
-        headers: { Authorization: `Bearer ${accessToken}` },
-        params: {
-          select: 'id,name,file,folder,parentReference',
-          top: siteConfig.maxItems,
-        },
-      })
-      res.status(200).json(data.value)
-    } catch (error: any) {
-      res.status(error?.response?.status ?? 500).json({ error: error?.response?.data ?? 'Internal server error.' })
-    }
-  } else {
+  if (typeof searchQuery !== 'string') {
     res.status(200).json([])
+    return
   }
-  return
+
+  const searchRootPath = encodePath('/')
+  const encodedPath = searchRootPath === '' ? searchRootPath : searchRootPath + ':'
+  const searchApi = `${apiConfig.driveApi}/root${encodedPath}/search(q='${sanitiseQuery(searchQuery)}')`
+
+  try {
+    const { data } = await axios.get(searchApi, {
+      headers: { Authorization: `Bearer ${accessToken}` },
+      params: {
+        select: 'id,name,file,folder,parentReference',
+        top: siteConfig.maxItems,
+      },
+    })
+    res.status(200).json(data.value)
+  } catch (error: unknown) {
+    apiErrorResponse(res, error)
+  }
 }

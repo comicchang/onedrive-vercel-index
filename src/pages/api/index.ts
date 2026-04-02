@@ -9,6 +9,7 @@ import { revealObfuscatedToken } from '../../utils/oAuthHandler'
 import { compareHashedToken } from '../../utils/protectedRouteHandler'
 import { getOdAuthTokens, storeOdAuthTokens } from '../../utils/odAuthTokenStore'
 import { runCorsMiddleware } from './raw'
+import { requireAccessToken, validateAndCleanPath, handleAuthRoute, apiErrorResponse } from '../../utils/apiMiddleware'
 
 const basePath = pathPosix.resolve('/', siteConfig.baseDirectory)
 const clientSecret = revealObfuscatedToken(apiConfig.obfuscatedClientSecret)
@@ -144,9 +145,10 @@ export async function checkAuthRoute(
     ) {
       return { code: 401, message: 'Password required.' }
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     // Password file not found, fallback to 404
-    if (error?.response?.status === 404) {
+    const axiosError = error as { response?: { status?: number } }
+    if (axiosError?.response?.status === 404) {
       return { code: 404, message: "You didn't set a password." }
     } else {
       return { code: 500, message: 'Internal server error.' }
@@ -176,49 +178,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // If method is GET, then the API is a normal request to the OneDrive API for files or folders
   const { path = '/', raw = false, next = '', sort = '' } = req.query
 
-  // Set edge function caching for faster load times, check docs:
-  // https://vercel.com/docs/concepts/functions/edge-caching
   res.setHeader('Cache-Control', apiConfig.cacheControlHeader)
 
-  // Sometimes the path parameter is defaulted to '[...path]' which we need to handle
-  if (path === '[...path]') {
-    res.status(400).json({ error: 'No path specified.' })
-    return
-  }
-  // If the path is not a valid path, return 400
-  if (typeof path !== 'string') {
-    res.status(400).json({ error: 'Path query invalid.' })
-    return
-  }
-  // Besides normalizing and making absolute, trailing slashes are trimmed
-  const cleanPath = pathPosix.resolve('/', pathPosix.normalize(path)).replace(/\/$/, '')
+  const cleanPath = validateAndCleanPath(path, res)
+  if (!cleanPath) return
 
-  // Validate sort param
   if (typeof sort !== 'string') {
     res.status(400).json({ error: 'Sort query invalid.' })
     return
   }
 
-  const accessToken = await getAccessToken()
+  const accessToken = await requireAccessToken(res)
+  if (!accessToken) return
 
-  // Return error 403 if access_token is empty
-  if (!accessToken) {
-    res.status(403).json({ error: 'No access token.' })
-    return
-  }
-
-  // Handle protected routes authentication
-  const { code, message } = await checkAuthRoute(cleanPath, accessToken, req.headers['od-protected-token'] as string)
-  // Status code other than 200 means user has not authenticated yet
-  if (code !== 200) {
-    res.status(code).json({ error: message })
-    return
-  }
-  // If message is empty, then the path is not protected.
-  // Conversely, protected routes are not allowed to serve from cache.
-  if (message !== '') {
-    res.setHeader('Cache-Control', 'no-cache')
-  }
+  const authed = await handleAuthRoute(cleanPath, accessToken, req.headers['od-protected-token'] as string, res)
+  if (!authed) return
 
   const requestPath = encodePath(cleanPath)
   // Handle response from OneDrive API
@@ -285,8 +259,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     res.status(200).json({ file: identityData })
     return
-  } catch (error: any) {
-    res.status(error?.response?.code ?? 500).json({ error: error?.response?.data ?? 'Internal server error.' })
+  } catch (error: unknown) {
+    apiErrorResponse(res, error)
     return
   }
 }

@@ -2,7 +2,7 @@ import { MouseEventHandler, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import toast from 'react-hot-toast'
-import { useClipboard } from 'use-clipboard-copy'
+import { useClipboard } from '../utils/useClipboard'
 import { useTranslation } from 'react-i18next'
 
 import Image from 'next/image'
@@ -13,7 +13,7 @@ import { getStoredToken } from '../utils/protectedRouteHandler'
 import CustomEmbedLinkMenu from './CustomEmbedLinkMenu'
 
 const btnStyleMap = (btnColor?: string) => {
-  const colorMap = {
+  const colorMap: Record<string, string> = {
     gray: 'hover:text-gray-600 dark:hover:text-white focus:ring-gray-200 focus:text-gray-600 dark:focus:text-white border-gray-300 dark:border-gray-500 dark:focus:ring-gray-500',
     blue: 'hover:text-blue-600 focus:ring-blue-200 focus:text-blue-600 border-blue-300 dark:border-blue-700 dark:focus:ring-blue-500',
     teal: 'hover:text-teal-600 focus:ring-teal-200 focus:text-teal-600 border-teal-300 dark:border-teal-700 dark:focus:ring-teal-500',
