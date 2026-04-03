@@ -152,7 +152,7 @@ importers:
         version: 15.5.13
       i18next-cli:
         specifier: ^1.51.3
-        version: 1.51.5(@swc/helpers@0.5.20)(@types/node@24.12.2)(i18next@26.0.3(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(typescript@6.0.2)
+        version: 1.51.6(@swc/helpers@0.5.20)(@types/node@24.12.2)(i18next@26.0.3(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(typescript@6.0.2)
       prettier:
         specifier: ^3.7.4
         version: 3.8.1
@@ -1461,8 +1461,8 @@ packages:
     resolution: {integrity: sha512-eKCa6bwnJhvxj14kZk5NCPc6Hb6BdsU9DZcOnmQKSnO1VKrfV0zCvtttPZUsBvjmNDn8rpcJfpwSYnHBjc95MQ==}
     engines: {node: '>=18.18.0'}
 
-  i18next-cli@1.51.5:
-    resolution: {integrity: sha512-WjNfP2D61NjxH9KNpsCq0dg6PRcSo4ZWxEx6MawiX/ZXIB8QeKVQEMFGe+5mP+1QN88Wz5Zgopjll1WXB4g/kg==}
+  i18next-cli@1.51.6:
+    resolution: {integrity: sha512-s1eBAvWiDqABtpG54balm5oyTtWaqmjfgMNJHX+7OdB9th9Nnn0DLQpkZr/j3bVuO8dumfGiAl/oCRYQd6aNoQ==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -1857,8 +1857,8 @@ packages:
     resolution: {integrity: sha512-VP79XUPxV2CigYP3jWwAUFSku2aKqBH7uTAapFWCBqutsbmDo96KY5o8uh6U+/YSIn5OxJnXp73beVkpqMIGhA==}
     engines: {node: '>=18'}
 
-  minimatch@10.2.4:
-    resolution: {integrity: sha512-oRjTw/97aTBN0RHbYCdtF1MQfvusSIBQM0IZEgzl6426+8jSC0nF1a/GmnVLpfB9yyr6g6FTqWqiZVbxrtaCIg==}
+  minimatch@10.2.5:
+    resolution: {integrity: sha512-MULkVLfKGYDFYejP07QOurDLLQpcjk7Fw+7jXS2R2czRQzR56yHRveU5NDJEOviH+hETZKSkIk5c+T23GjFUMg==}
     engines: {node: 18 || 20 || >=22}
 
   minipass@7.1.3:
@@ -3501,7 +3501,7 @@ snapshots:
 
   glob@13.0.6:
     dependencies:
-      minimatch: 10.2.4
+      minimatch: 10.2.5
       minipass: 7.1.3
       path-scurry: 2.0.2
 
@@ -3651,7 +3651,7 @@ snapshots:
 
   human-signals@8.0.1: {}
 
-  i18next-cli@1.51.5(@swc/helpers@0.5.20)(@types/node@24.12.2)(i18next@26.0.3(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(typescript@6.0.2):
+  i18next-cli@1.51.6(@swc/helpers@0.5.20)(@types/node@24.12.2)(i18next@26.0.3(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(typescript@6.0.2):
     dependencies:
       '@croct/json5-parser': 0.2.2
       '@swc/core': 1.15.21(@swc/helpers@0.5.20)
@@ -3664,7 +3664,7 @@ snapshots:
       jiti: 2.6.1
       jsonc-parser: 3.3.1
       magic-string: 0.30.21
-      minimatch: 10.2.4
+      minimatch: 10.2.5
       ora: 9.3.0
       react: 19.2.4
       react-i18next: 17.0.2(i18next@26.0.3(typescript@6.0.2))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@6.0.2)
@@ -4274,7 +4274,7 @@ snapshots:
 
   mimic-function@5.0.1: {}
 
-  minimatch@10.2.4:
+  minimatch@10.2.5:
     dependencies:
       brace-expansion: 5.0.5
 
