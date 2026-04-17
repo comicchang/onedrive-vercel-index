@@ -152,7 +152,7 @@ importers:
         version: 15.5.13
       i18next-cli:
         specifier: ^1.51.3
-        version: 1.53.2(@swc/helpers@0.5.21)(@types/node@24.12.2)(i18next@26.0.5(typescript@6.0.3))(react-dom@19.2.5(react@19.2.5))(typescript@6.0.3)
+        version: 1.54.0(@swc/helpers@0.5.21)(@types/node@24.12.2)(i18next@26.0.5(typescript@6.0.3))(react-dom@19.2.5(react@19.2.5))(typescript@6.0.3)
       prettier:
         specifier: ^3.7.4
         version: 3.8.3
@@ -1461,13 +1461,13 @@ packages:
     resolution: {integrity: sha512-eKCa6bwnJhvxj14kZk5NCPc6Hb6BdsU9DZcOnmQKSnO1VKrfV0zCvtttPZUsBvjmNDn8rpcJfpwSYnHBjc95MQ==}
     engines: {node: '>=18.18.0'}
 
-  i18next-cli@1.53.2:
-    resolution: {integrity: sha512-7Y4kxP5hMhisqdy6fIxCkKxtJ0rpy0Qern7kxzoZVtID/pFxJdSBHHu6a96iG5Puv725C+/s53XU+j0+4I17FQ==}
+  i18next-cli@1.54.0:
+    resolution: {integrity: sha512-LiDQ7Ex2gsHtwtgSNZqjCgT6jnajWa+EbcNS5xDCPe7P8bl81mdNQRCZuUkNFoBIEkJnAZT+ZWAhfRK0MrAuaQ==}
     engines: {node: '>=22'}
     hasBin: true
 
-  i18next-resources-for-ts@2.0.2:
-    resolution: {integrity: sha512-BGPebhvjrvU+pgKNsIzb3cxl6/8LJw1pxNkIlUpnxCC4SXjbIwXeHuNxFnOkTAryRfMqYf81lPjYD2gngDyOfQ==}
+  i18next-resources-for-ts@2.1.0:
+    resolution: {integrity: sha512-n5UexwEVt0OoIAhG2MWpSnAVJW1U8mQrQTmXyxc5DMAx+NLhcLZhSMJo/FnUsA5JQ3obTYqTgB7YIuZKWpDgow==}
     hasBin: true
 
   i18next-resources-to-backend@1.2.1:
@@ -3655,7 +3655,7 @@ snapshots:
 
   human-signals@8.0.1: {}
 
-  i18next-cli@1.53.2(@swc/helpers@0.5.21)(@types/node@24.12.2)(i18next@26.0.5(typescript@6.0.3))(react-dom@19.2.5(react@19.2.5))(typescript@6.0.3):
+  i18next-cli@1.54.0(@swc/helpers@0.5.21)(@types/node@24.12.2)(i18next@26.0.5(typescript@6.0.3))(react-dom@19.2.5(react@19.2.5))(typescript@6.0.3):
     dependencies:
       '@croct/json5-parser': 0.2.2
       '@swc/core': 1.15.26(@swc/helpers@0.5.21)
@@ -3663,7 +3663,7 @@ snapshots:
       commander: 14.0.3
       execa: 9.6.1
       glob: 13.0.6
-      i18next-resources-for-ts: 2.0.2(@swc/helpers@0.5.21)
+      i18next-resources-for-ts: 2.1.0(@swc/helpers@0.5.21)
       inquirer: 13.4.1(@types/node@24.12.2)
       jiti: 2.6.1
       jsonc-parser: 3.3.1
@@ -3681,7 +3681,7 @@ snapshots:
       - react-native
       - typescript
 
-  i18next-resources-for-ts@2.0.2(@swc/helpers@0.5.21):
+  i18next-resources-for-ts@2.1.0(@swc/helpers@0.5.21):
     dependencies:
       '@babel/runtime': 7.29.2
       '@swc/core': 1.15.26(@swc/helpers@0.5.21)
