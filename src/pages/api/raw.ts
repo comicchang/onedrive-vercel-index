@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import axios, { AxiosResponseHeaders } from 'axios'
+import type { OutgoingHttpHeaders } from 'http'
+import axios from 'axios'
 import Cors from 'cors'
 
 import { driveApi, cacheControlHeader } from '../../../config/api.config'
@@ -48,7 +49,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           responseType: 'stream',
         })
         headers['Cache-Control'] = cacheControlHeader
-        res.writeHead(200, headers as AxiosResponseHeaders)
+        res.writeHead(200, headers as unknown as OutgoingHttpHeaders)
         stream.pipe(res)
       } else {
         res.redirect(data['@microsoft.graph.downloadUrl'])
