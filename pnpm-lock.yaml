@@ -152,7 +152,7 @@ importers:
         version: 15.5.13
       i18next-cli:
         specifier: ^1.51.3
-        version: 1.56.0(@swc/helpers@0.5.21)(@types/node@24.12.2)(i18next@26.0.6(typescript@6.0.3))(react-dom@19.2.5(react@19.2.5))(typescript@6.0.3)
+        version: 1.56.2(@swc/helpers@0.5.21)(@types/node@24.12.2)(i18next@26.0.6(typescript@6.0.3))(react-dom@19.2.5(react@19.2.5))(typescript@6.0.3)
       prettier:
         specifier: ^3.7.4
         version: 3.8.3
@@ -1461,8 +1461,8 @@ packages:
     resolution: {integrity: sha512-eKCa6bwnJhvxj14kZk5NCPc6Hb6BdsU9DZcOnmQKSnO1VKrfV0zCvtttPZUsBvjmNDn8rpcJfpwSYnHBjc95MQ==}
     engines: {node: '>=18.18.0'}
 
-  i18next-cli@1.56.0:
-    resolution: {integrity: sha512-o2/qh3RHN2QhZeoCIzfeJNOz3lZGD4vpsOSJfJOSsBiWCyiuBW3BalZfDYHO2sHdptYZ6+NNplPpleevm/cE+A==}
+  i18next-cli@1.56.2:
+    resolution: {integrity: sha512-Z7+Ocm5mBDpAP0et36ohp+aq+xpCA73ZFewIBgYS2UcjxFuy7xxppJJ3qRsksqcRWyOQPFF/iyd2Wbtto1Rh+A==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -1946,8 +1946,8 @@ packages:
     resolution: {integrity: sha512-VXJjc87FScF88uafS3JllDgvAm+c/Slfz06lorj2uAY34rlUu0Nt+v8wreiImcrgAjjIHp1rXpTDlLOGw29WwQ==}
     engines: {node: '>=18'}
 
-  ora@9.3.0:
-    resolution: {integrity: sha512-lBX72MWFduWEf7v7uWf5DHp9Jn5BI8bNPGuFgtXMmr2uDz2Gz2749y3am3agSDdkhHPHYmmxEGSKH85ZLGzgXw==}
+  ora@9.4.0:
+    resolution: {integrity: sha512-84cglkRILFxdtA8hAvLNdMrtBpPNBTrQ9/ulg0FA7xLMnD6mifv+enAIeRmvtv+WgdCE+LPGOfQmtJRrVaIVhQ==}
     engines: {node: '>=20'}
 
   pako@1.0.11:
@@ -3651,7 +3651,7 @@ snapshots:
 
   human-signals@8.0.1: {}
 
-  i18next-cli@1.56.0(@swc/helpers@0.5.21)(@types/node@24.12.2)(i18next@26.0.6(typescript@6.0.3))(react-dom@19.2.5(react@19.2.5))(typescript@6.0.3):
+  i18next-cli@1.56.2(@swc/helpers@0.5.21)(@types/node@24.12.2)(i18next@26.0.6(typescript@6.0.3))(react-dom@19.2.5(react@19.2.5))(typescript@6.0.3):
     dependencies:
       '@croct/json5-parser': 0.2.2
       '@swc/core': 1.15.30(@swc/helpers@0.5.21)
@@ -3665,7 +3665,7 @@ snapshots:
       jsonc-parser: 3.3.1
       magic-string: 0.30.21
       minimatch: 10.2.5
-      ora: 9.3.0
+      ora: 9.4.0
       react: 19.2.5
       react-i18next: 17.0.4(i18next@26.0.6(typescript@6.0.3))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@6.0.3)
       yaml: 2.8.3
@@ -4366,7 +4366,7 @@ snapshots:
     dependencies:
       mimic-function: 5.0.1
 
-  ora@9.3.0:
+  ora@9.4.0:
     dependencies:
       chalk: 5.6.2
       cli-cursor: 5.0.0
