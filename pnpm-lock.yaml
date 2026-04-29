@@ -91,7 +91,7 @@ importers:
         version: 0.17.0(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       react-cookie:
         specifier: ^8.0.1
-        version: 8.1.0(@types/react@19.2.14)(react@19.2.5)
+        version: 8.1.2(@types/react@19.2.14)(react@19.2.5)
       react-dom:
         specifier: ^19.2.3
         version: 19.2.5(react@19.2.5)
@@ -2115,8 +2115,8 @@ packages:
       react: '>=16'
       react-dom: '>=16'
 
-  react-cookie@8.1.0:
-    resolution: {integrity: sha512-Qs+gD3gpQmUXnJUZafhJtNWhhNdi8OYbOAF5YQRAZa/D171ILOIEMfXDz/tmhkE+nOthllmqryHH6I/qmvIYWQ==}
+  react-cookie@8.1.2:
+    resolution: {integrity: sha512-S45Z1y1dHyYfLEI4bFKQICuP+SwJqTPWbdc2ZpE6aQSdjSVJAjUDfwTPq8B7BWieIsgyyEWMb/QOrudtwJMjXA==}
     peerDependencies:
       react: '>= 16.3.0'
 
@@ -2378,8 +2378,8 @@ packages:
   unist-util-visit@5.0.0:
     resolution: {integrity: sha512-MR04uvD+07cwl/yhVuVWAtw+3GOR/knlL55Nd/wAdblk27GCVt3lqpTivy/tkJcZoNPzTwS1Y+KMojlLDhoTzg==}
 
-  universal-cookie@8.1.0:
-    resolution: {integrity: sha512-65+kikQAWq7gsJbirwB7dk6e8xeug1hx3++x2dQoymdXcV7fYv0yChOgHCg01ZwP3fE3sYeq6EWCSpFv3HLl9g==}
+  universal-cookie@8.1.2:
+    resolution: {integrity: sha512-kcKzTGNsxVytujrYOvQbvh//QyFrA53HrzCGyzh6i9ujCww5gfPrLK0tG+jJD40SIIldiEjBNPPSR8fBMS21GA==}
 
   url-polyfill@1.1.14:
     resolution: {integrity: sha512-p4f3TTAG6ADVF3mwbXw7hGw+QJyw5CnNGvYh5fCuQQZIiuKUswqcznyV3pGDP9j0TSmC4UvRKm8kl1QsX1diiQ==}
@@ -4487,12 +4487,12 @@ snapshots:
       react: 19.2.5
       react-dom: 19.2.5(react@19.2.5)
 
-  react-cookie@8.1.0(@types/react@19.2.14)(react@19.2.5):
+  react-cookie@8.1.2(@types/react@19.2.14)(react@19.2.5):
     dependencies:
       '@types/hoist-non-react-statics': 3.3.7(@types/react@19.2.14)
       hoist-non-react-statics: 3.3.2
       react: 19.2.5
-      universal-cookie: 8.1.0
+      universal-cookie: 8.1.2
     transitivePeerDependencies:
       - '@types/react'
 
@@ -4827,7 +4827,7 @@ snapshots:
       unist-util-is: 6.0.1
       unist-util-visit-parents: 6.0.2
 
-  universal-cookie@8.1.0:
+  universal-cookie@8.1.2:
     dependencies:
       cookie: 1.1.1
 
