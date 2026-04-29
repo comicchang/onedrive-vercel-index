@@ -61,7 +61,7 @@
     "@types/react-syntax-highlighter": "^15.5.13",
     "i18next-cli": "^1.51.3",
     "prettier": "^3.7.4",
-    "prettier-plugin-tailwindcss": "^0.7.2",
+    "prettier-plugin-tailwindcss": "^0.8.0",
     "tailwindcss": "^4.1.18",
     "typescript": "6.0.3"
   },
