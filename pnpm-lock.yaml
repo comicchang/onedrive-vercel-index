@@ -100,7 +100,7 @@ importers:
         version: 2.6.0(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       react-hotkeys-hook:
         specifier: ^5.2.1
-        version: 5.3.0(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
+        version: 5.3.2(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       react-i18next:
         specifier: ^17.0.0
         version: 17.0.6(i18next@26.0.8(typescript@6.0.3))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@6.0.3)
@@ -2005,8 +2005,8 @@ packages:
     resolution: {integrity: sha512-pMMHxBOZKFU6HgAZ4eyGnwXF/EvPGGqUr0MnZ5+99485wwW41kW91A4LOGxSHhgugZmSChL5AlElNdwlNgcnLQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.13:
-    resolution: {integrity: sha512-qif0+jGGZoLWdHey3UFHHWP0H7Gbmsk8T5VEqyYFbWqPr1XqvLGBbk/sl8V5exGmcYJklJOhOQq1pV9IcsiFag==}
+  postcss@8.5.14:
+    resolution: {integrity: sha512-SoSL4+OSEtR99LHFZQiJLkT59C5B1amGO1NzTwj7TT1qCUgUO6hxOvzkOYxD+vMrXBM3XJIKzokoERdqQq/Zmg==}
     engines: {node: ^10 || ^12 || >=14}
 
   prettier-plugin-tailwindcss@0.7.2:
@@ -2137,8 +2137,8 @@ packages:
       react: '>=16'
       react-dom: '>=16'
 
-  react-hotkeys-hook@5.3.0:
-    resolution: {integrity: sha512-/pKgBHnUJM2V8VQtGGNG89s4aX371CBt5KV8mg4Gv6JpS+m6HocnD2T+k6ymtfZ21rvCCxWqWUGpw/w5papgIQ==}
+  react-hotkeys-hook@5.3.2:
+    resolution: {integrity: sha512-DDDy9xK6mbTQ6aPlQvIl0dA/a90T/AWml4Rm21JXFDLlRHalIg4/Rv3equUQYs5xPTWq+oEl6RD7mi/nBpU3Uw==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -3149,7 +3149,7 @@ snapshots:
       '@vue/shared': 3.5.25
       estree-walker: 2.0.2
       magic-string: 0.30.21
-      postcss: 8.5.13
+      postcss: 8.5.14
       source-map-js: 1.2.1
     optional: true
 
@@ -4444,7 +4444,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.13:
+  postcss@8.5.14:
     dependencies:
       nanoid: 3.3.12
       picocolors: 1.1.1
@@ -4516,7 +4516,7 @@ snapshots:
       react: 19.2.5
       react-dom: 19.2.5(react@19.2.5)
 
-  react-hotkeys-hook@5.3.0(react-dom@19.2.5(react@19.2.5))(react@19.2.5):
+  react-hotkeys-hook@5.3.2(react-dom@19.2.5(react@19.2.5))(react@19.2.5):
     dependencies:
       react: 19.2.5
       react-dom: 19.2.5(react@19.2.5)
