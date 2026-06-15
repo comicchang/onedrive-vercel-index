@@ -53,9 +53,10 @@ const VideoPlayer: FC<{
   useEffect(() => {
     if (isFlv) {
       const video = document.getElementById('plyr')
-      const flv = mpegts.createPlayer({ url: videoUrl, type: 'flv' })
-      flv.attachMediaElement(video)
-      flv.load()
+      const player = mpegts.createPlayer({ url: videoUrl, type: 'flv' })
+      player.attachMediaElement(video)
+      player.load()
+      return () => { player.destroy() }
     }
   }, [videoUrl, isFlv, mpegts])
 
@@ -103,17 +104,17 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
 
   // 多轨道字幕发现与加载：构造 21 个候选、并行盲探 fetch → 转换 VTT → Object URL
   useEffect(() => {
+    setTracks([])
+    setTracksReady(false)
     let cancelled = false
     const currentUrls: string[] = []
     objectUrlsRef.current = currentUrls
 
     async function loadSubtitles() {
       const candidates = buildSubtitleCandidates(asPath)
-const tokenSuffix = hashedToken ? `&odpt=${hashedToken}` : ''
-
       const results = await Promise.allSettled(
         candidates.map(async candidate => {
-          const url = rawUrl(candidate.path)
+          const url = `/api/raw/?path=${encodeURIComponent(candidate.path)}${hashedToken ? `&odpt=${hashedToken}` : ''}`
           const resp = await axios.get<string>(url, { responseType: 'text' })
           return { candidate, text: resp.data }
         })
@@ -174,7 +175,7 @@ const tokenSuffix = hashedToken ? `&odpt=${hashedToken}` : ''
         URL.revokeObjectURL(url)
       }
     }
-  }, [asPath, hashedToken, rawUrl])
+  }, [asPath, hashedToken])
 
   return (
     <>
