@@ -12,7 +12,10 @@ import { useClipboard } from '../../utils/useClipboard'
 import { getBaseUrl } from '../../utils/getBaseUrl'
 import { getExtension } from '../../utils/getFileIcon'
 import { useRawUrl } from '../../utils/useRawUrl'
+import type { SubtitleCandidate } from '../../utils/subtitles'
 import {
+  SUBTITLE_EXTENSIONS,
+  SUBTITLE_LANGUAGE_SUFFIXES,
   buildSubtitleCandidates,
   getSubtitleLabel,
   convertToVtt,
@@ -111,18 +114,84 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
     objectUrlsRef.current = currentUrls
 
     async function loadSubtitles() {
-      const candidates = buildSubtitleCandidates(asPath)
-      // Phase 1: 使用 HEAD 探测哪些候选文件实际存在，避免浪费 GET 带宽
-      const probeResults = await Promise.allSettled(
-        candidates.map(async candidate => {
-          const url = rawUrl(candidate.path)
-          await axios.head(url)
-          return candidate
+      const basePath = asPath.substring(0, asPath.lastIndexOf('/')) || '/'
+      const videoName = asPath.substring(asPath.lastIndexOf('/') + 1)
+      const lastDot = videoName.lastIndexOf('.')
+      const videoStem = lastDot === -1 ? videoName : videoName.substring(0, lastDot)
+
+      let existingCandidates: SubtitleCandidate[] | null = null
+
+      // Phase 1a: 通过父目录文件列表精确定位字幕文件（避免盲探 21 个 HEAD 请求）
+      try {
+        const queryParts = [`path=${encodeURIComponent(basePath)}`]
+        if (hashedToken) queryParts.push(`odpt=${hashedToken}`)
+        const { data } = await axios.get(`/api/?${queryParts.join('&')}`, {
+          headers: hashedToken ? { 'od-protected-token': hashedToken } : {},
         })
-      )
-      const existingCandidates = probeResults
-        .filter((r): r is PromiseFulfilledResult<any> => r.status === 'fulfilled')
-        .map(r => r.value)
+        const siblings: string[] = data?.folder?.value?.map((f: any) => f.name) ?? []
+
+        if (siblings.length > 0) {
+          // 从实际文件列表中匹配同名字幕
+          const subtitleNames = siblings.filter(name => {
+            const dot = name.lastIndexOf('.')
+            if (dot === -1) return false
+            const ext = name.substring(dot + 1).toLowerCase()
+            const stem = name.substring(0, dot)
+            return (SUBTITLE_EXTENSIONS as readonly string[]).includes(ext) && (
+              stem === videoStem ||
+              (SUBTITLE_LANGUAGE_SUFFIXES as readonly string[]).some(lang => stem === `${videoStem}.${lang}`)
+            )
+          })
+
+          if (subtitleNames.length > 0) {
+            existingCandidates = subtitleNames.map(name => {
+              const dot = name.lastIndexOf('.')
+              const ext = name.substring(dot + 1).toLowerCase()
+              const stem = name.substring(0, dot)
+              const langSuffix = (SUBTITLE_LANGUAGE_SUFFIXES as readonly string[]).find(
+                lang => stem === `${videoStem}.${lang}`
+              )
+              return {
+                path: `${basePath === '/' ? '' : basePath}/${name}`,
+                extension: ext,
+                language: langSuffix,
+              }
+            })
+
+            // 按优先级排序：精确匹配优先 → 语言后缀 → 扩展名按 SUBTITLE_EXTENSIONS 顺序
+            existingCandidates.sort((a, b) => {
+              if (!a.language && b.language) return -1
+              if (a.language && !b.language) return 1
+              const extA = (SUBTITLE_EXTENSIONS as readonly string[]).indexOf(a.extension)
+              const extB = (SUBTITLE_EXTENSIONS as readonly string[]).indexOf(b.extension)
+              if (extA !== extB) return extA - extB
+              if (a.language && b.language) {
+                const langA = (SUBTITLE_LANGUAGE_SUFFIXES as readonly string[]).indexOf(a.language)
+                const langB = (SUBTITLE_LANGUAGE_SUFFIXES as readonly string[]).indexOf(b.language)
+                return langA - langB
+              }
+              return 0
+            })
+          }
+        }
+      } catch {
+        // API 不可用 → 回退到 HEAD 盲探
+      }
+
+      // Phase 1b: 文件列表匹配失败时回退到 HEAD 盲探
+      if (!existingCandidates) {
+        const candidates = buildSubtitleCandidates(asPath)
+        const probeResults = await Promise.allSettled(
+          candidates.map(async candidate => {
+            const url = rawUrl(candidate.path)
+            await axios.head(url)
+            return candidate
+          })
+        )
+        existingCandidates = probeResults
+          .filter((r): r is PromiseFulfilledResult<SubtitleCandidate> => r.status === 'fulfilled')
+          .map(r => r.value)
+      }
 
       // Phase 2: 只 GET 实际存在的字幕文件
       const results = await Promise.allSettled(
@@ -134,7 +203,6 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
       )
 
       if (cancelled) {
-        // 组件已卸载或 asPath 已变更 → 清理已创建的 Object URL
         for (const url of currentUrls) {
           URL.revokeObjectURL(url)
         }
@@ -143,16 +211,10 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
 
       const loadedTracks: SubtitleTrack[] = []
       for (const result of results) {
-        if (result.status !== 'fulfilled') {
-          // 404 或其他网络错误 → 静默跳过，不报错
-          continue
-        }
+        if (result.status !== 'fulfilled') continue
         const { candidate, text } = result.value
         const vttContent = convertToVtt(text, candidate.extension)
-        if (!vttContent) {
-          // 密码保护页返回的非字幕内容 → 跳过
-          continue
-        }
+        if (!vttContent) continue
 
         const blob = new Blob([vttContent], { type: 'text/vtt' })
         const objectUrl = URL.createObjectURL(blob)
@@ -191,7 +253,7 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
         URL.revokeObjectURL(url)
       }
     }
-  }, [asPath, rawUrl])
+  }, [asPath, hashedToken, rawUrl])
 
   return (
     <>
