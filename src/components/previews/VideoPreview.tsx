@@ -112,8 +112,21 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
 
     async function loadSubtitles() {
       const candidates = buildSubtitleCandidates(asPath)
-      const results = await Promise.allSettled(
+      // Phase 1: 使用 HEAD 探测哪些候选文件实际存在，避免浪费 GET 带宽
+      const probeResults = await Promise.allSettled(
         candidates.map(async candidate => {
+          const url = `/api/raw/?path=${encodeURIComponent(candidate.path)}${hashedToken ? `&odpt=${hashedToken}` : ''}`
+          await axios.head(url)
+          return candidate
+        })
+      )
+      const existingCandidates = probeResults
+        .filter((r): r is PromiseFulfilledResult<any> => r.status === 'fulfilled')
+        .map(r => r.value)
+
+      // Phase 2: 只 GET 实际存在的字幕文件
+      const results = await Promise.allSettled(
+        existingCandidates.map(async candidate => {
           const url = `/api/raw/?path=${encodeURIComponent(candidate.path)}${hashedToken ? `&odpt=${hashedToken}` : ''}`
           const resp = await axios.get<string>(url, { responseType: 'text' })
           return { candidate, text: resp.data }
