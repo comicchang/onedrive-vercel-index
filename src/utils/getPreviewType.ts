@@ -56,6 +56,7 @@ export const extensions: Record<string, string> = {
   txt: preview.text,
   vtt: preview.text,
   srt: preview.text,
+  ass: preview.text,
   log: preview.text,
   diff: preview.text,
 

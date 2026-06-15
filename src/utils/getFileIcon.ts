@@ -81,6 +81,7 @@ const extensions = {
   rtf: icons.text,
   vtt: icons.text,
   srt: icons.text,
+  ass: icons.text,
   log: icons.text,
   diff: icons.text,
 
