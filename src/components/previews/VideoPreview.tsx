@@ -114,8 +114,9 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
     objectUrlsRef.current = currentUrls
 
     async function loadSubtitles() {
-      const basePath = asPath.substring(0, asPath.lastIndexOf('/')) || '/'
-      const videoName = asPath.substring(asPath.lastIndexOf('/') + 1)
+      const decodedPath = decodeURIComponent(asPath)
+      const basePath = decodedPath.substring(0, decodedPath.lastIndexOf('/')) || '/'
+      const videoName = decodedPath.substring(decodedPath.lastIndexOf('/') + 1)
       const lastDot = videoName.lastIndexOf('.')
       const videoStem = lastDot === -1 ? videoName : videoName.substring(0, lastDot)
 
@@ -180,7 +181,7 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
 
       // Phase 1b: 文件列表匹配失败时回退到 HEAD 盲探
       if (!existingCandidates) {
-        const candidates = buildSubtitleCandidates(asPath)
+        const candidates = buildSubtitleCandidates(decodedPath)
         const probeResults = await Promise.allSettled(
           candidates.map(async candidate => {
             const url = rawUrl(candidate.path)
