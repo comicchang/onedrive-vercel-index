@@ -1,3 +1,4 @@
+import { useCallback } from 'react'
 import { useRouter } from 'next/router'
 import { getStoredToken } from './protectedRouteHandler'
 
@@ -10,8 +11,10 @@ export function useRawUrl() {
   const hashedToken = getStoredToken(asPath)
 
   /** 构建 /api/raw/ URL，可选自定义路径 */
-  const rawUrl = (path?: string) =>
-    `/api/raw/?path=${encodeURIComponent(path ?? asPath)}${hashedToken ? `&odpt=${hashedToken}` : ''}`
+  const rawUrl = useCallback((path?: string) =>
+    `/api/raw/?path=${encodeURIComponent(path ?? asPath)}${hashedToken ? `&odpt=${hashedToken}` : ''}`,
+    [asPath, hashedToken]
+  )
 
   return { asPath, hashedToken, rawUrl }
 }

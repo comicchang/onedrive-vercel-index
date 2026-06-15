@@ -115,7 +115,7 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
       // Phase 1: 使用 HEAD 探测哪些候选文件实际存在，避免浪费 GET 带宽
       const probeResults = await Promise.allSettled(
         candidates.map(async candidate => {
-          const url = `/api/raw/?path=${encodeURIComponent(candidate.path)}${hashedToken ? `&odpt=${hashedToken}` : ''}`
+          const url = rawUrl(candidate.path)
           await axios.head(url)
           return candidate
         })
@@ -127,7 +127,7 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
       // Phase 2: 只 GET 实际存在的字幕文件
       const results = await Promise.allSettled(
         existingCandidates.map(async candidate => {
-          const url = `/api/raw/?path=${encodeURIComponent(candidate.path)}${hashedToken ? `&odpt=${hashedToken}` : ''}`
+          const url = rawUrl(candidate.path)
           const resp = await axios.get<string>(url, { responseType: 'text' })
           return { candidate, text: resp.data }
         })
@@ -191,7 +191,7 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
         URL.revokeObjectURL(url)
       }
     }
-  }, [asPath, hashedToken])
+  }, [asPath, rawUrl])
 
   return (
     <>
