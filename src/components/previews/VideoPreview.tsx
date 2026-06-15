@@ -165,8 +165,11 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
     }
 
     loadSubtitles().catch(err => {
-      // 顶层异常也静默吞掉，不影响视频播放
       console.error('Subtitle loading failed:', err)
+      if (!cancelled) {
+        setTracks([])
+        setTracksReady(true)
+      }
     })
 
     return () => {
@@ -185,9 +188,11 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
           <FourOhFour errorMsg={error.message} />
         ) : loading && isFlv ? (
           <Loading loadingText={t('Loading FLV extension...')} />
+        ) : !tracksReady ? (
+          <Loading loadingText={t('Loading')} />
         ) : (
           <VideoPlayer
-            key={tracksReady ? 'tracks-loaded' : 'tracks-loading'}
+            key={asPath}
             videoName={file.name}
             videoUrl={videoUrl}
             width={file.video?.width}
