@@ -1,6 +1,6 @@
 import type { OdFileObject } from '../../types'
 
-import { FC, useEffect, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import dynamic from 'next/dynamic'
 
@@ -12,6 +12,11 @@ import { useClipboard } from '../../utils/useClipboard'
 import { getBaseUrl } from '../../utils/getBaseUrl'
 import { getExtension } from '../../utils/getFileIcon'
 import { useRawUrl } from '../../utils/useRawUrl'
+import {
+  buildSubtitleCandidates,
+  getSubtitleLabel,
+  convertToVtt,
+} from '../../utils/subtitles'
 
 import { DownloadButton } from '../DownloadBtnGroup'
 import { DownloadBtnContainer, PreviewContainer } from './Containers'
@@ -26,46 +31,40 @@ const Plyr = dynamic(() => import('plyr-react').then(mod => mod.Plyr), {
   loading: () => <div>Loading video player...</div>
 })
 
+/** 字幕轨道描述，直接映射到 Plyr 的 tracks 数组元素 */
+export interface SubtitleTrack {
+  kind: string
+  label: string
+  src: string
+  default?: boolean
+  srclang?: string
+}
+
 const VideoPlayer: FC<{
   videoName: string
   videoUrl: string
   width?: number
   height?: number
   thumbnail: string
-  subtitle: string
+  tracks: SubtitleTrack[]
   isFlv: boolean
   mpegts: any
-}> = ({ videoName, videoUrl, width, height, thumbnail, subtitle, isFlv, mpegts }) => {
+}> = ({ videoName, videoUrl, width, height, thumbnail, tracks, isFlv, mpegts }) => {
   useEffect(() => {
-    // Really really hacky way to inject subtitles as file blobs into the video element
-    axios
-      .get(subtitle, { responseType: 'blob' })
-      .then(resp => {
-        const track = document.querySelector('track')
-        track?.setAttribute('src', URL.createObjectURL(resp.data))
-      })
-      .catch(() => {
-        console.log('Could not load subtitle.')
-      })
-
     if (isFlv) {
-      const loadFlv = () => {
-        // Really hacky way to get the exposed video element from Plyr
-        const video = document.getElementById('plyr')
-        const flv = mpegts.createPlayer({ url: videoUrl, type: 'flv' })
-        flv.attachMediaElement(video)
-        flv.load()
-      }
-      loadFlv()
+      const video = document.getElementById('plyr')
+      const flv = mpegts.createPlayer({ url: videoUrl, type: 'flv' })
+      flv.attachMediaElement(video)
+      flv.load()
     }
-  }, [videoUrl, isFlv, mpegts, subtitle])
+  }, [videoUrl, isFlv, mpegts])
 
   // Common plyr configs, including the video source and plyr options
   const plyrSource: Record<string, unknown> = {
     type: 'video',
     title: videoName,
     poster: thumbnail,
-    tracks: [{ kind: 'captions', label: videoName, src: '', default: true }],
+    tracks: tracks.map(t => ({ ...t })),
   }
   const plyrOptions: Plyr.Options = {
     ratio: `${width ?? 16}:${height ?? 9}`,
@@ -82,12 +81,12 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
   const clipboard = useClipboard()
 
   const [menuOpen, setMenuOpen] = useState(false)
+  const [tracks, setTracks] = useState<SubtitleTrack[]>([])
+  const [tracksReady, setTracksReady] = useState(false)
+  const objectUrlsRef = useRef<string[]>([])
   const { t } = useTranslation()
 
   const thumbnail = `/api/thumbnail/?path=${asPath}&size=large${hashedToken ? `&odpt=${hashedToken}` : ''}`
-
-  const vtt = `${asPath.substring(0, asPath.lastIndexOf('.'))}.vtt`
-  const subtitle = rawUrl(vtt)
 
   const videoUrl = rawUrl()
 
@@ -102,6 +101,81 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
     }
   }, [isFlv])
 
+  // 多轨道字幕发现与加载：构造 21 个候选、并行盲探 fetch → 转换 VTT → Object URL
+  useEffect(() => {
+    let cancelled = false
+    const currentUrls: string[] = []
+    objectUrlsRef.current = currentUrls
+
+    async function loadSubtitles() {
+      const candidates = buildSubtitleCandidates(asPath)
+const tokenSuffix = hashedToken ? `&odpt=${hashedToken}` : ''
+
+      const results = await Promise.allSettled(
+        candidates.map(async candidate => {
+          const url = rawUrl(candidate.path)
+          const resp = await axios.get<string>(url, { responseType: 'text' })
+          return { candidate, text: resp.data }
+        })
+      )
+
+      if (cancelled) {
+        // 组件已卸载或 asPath 已变更 → 清理已创建的 Object URL
+        for (const url of currentUrls) {
+          URL.revokeObjectURL(url)
+        }
+        return
+      }
+
+      const loadedTracks: SubtitleTrack[] = []
+      for (const result of results) {
+        if (result.status !== 'fulfilled') {
+          // 404 或其他网络错误 → 静默跳过，不报错
+          continue
+        }
+        const { candidate, text } = result.value
+        const vttContent = convertToVtt(text, candidate.extension)
+        if (!vttContent) {
+          // 密码保护页返回的非字幕内容 → 跳过
+          continue
+        }
+
+        const blob = new Blob([vttContent], { type: 'text/vtt' })
+        const objectUrl = URL.createObjectURL(blob)
+        currentUrls.push(objectUrl)
+
+        loadedTracks.push({
+          kind: 'captions',
+          label: getSubtitleLabel(candidate),
+          src: objectUrl,
+          default: loadedTracks.length === 0,
+          srclang: candidate.language ?? '',
+        })
+      }
+
+      if (!cancelled) {
+        setTracks(loadedTracks)
+        setTracksReady(true)
+      } else {
+        for (const url of currentUrls) {
+          URL.revokeObjectURL(url)
+        }
+      }
+    }
+
+    loadSubtitles().catch(err => {
+      // 顶层异常也静默吞掉，不影响视频播放
+      console.error('Subtitle loading failed:', err)
+    })
+
+    return () => {
+      cancelled = true
+      for (const url of objectUrlsRef.current) {
+        URL.revokeObjectURL(url)
+      }
+    }
+  }, [asPath, hashedToken, rawUrl])
+
   return (
     <>
       <CustomEmbedLinkMenu path={asPath} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
@@ -112,12 +186,13 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
           <Loading loadingText={t('Loading FLV extension...')} />
         ) : (
           <VideoPlayer
+            key={tracksReady ? 'tracks-loaded' : 'tracks-loading'}
             videoName={file.name}
             videoUrl={videoUrl}
             width={file.video?.width}
             height={file.video?.height}
             thumbnail={thumbnail}
-            subtitle={subtitle}
+            tracks={tracks}
             isFlv={isFlv}
             mpegts={mpegts}
           />
