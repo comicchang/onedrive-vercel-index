@@ -11,7 +11,7 @@ export function useRawUrl() {
 
   /** 构建 /api/raw/ URL，可选自定义路径 */
   const rawUrl = (path?: string) =>
-    `/api/raw/?path=${path ?? asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`
+    `/api/raw/?path=${encodeURIComponent(path ?? asPath)}${hashedToken ? `&odpt=${hashedToken}` : ''}`
 
   return { asPath, hashedToken, rawUrl }
 }
