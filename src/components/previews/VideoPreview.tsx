@@ -87,7 +87,7 @@ const VideoPreview: FC<{ file: OdFileObject }> = ({ file }) => {
   const objectUrlsRef = useRef<string[]>([])
   const { t } = useTranslation()
 
-  const thumbnail = `/api/thumbnail/?path=${asPath}&size=large${hashedToken ? `&odpt=${hashedToken}` : ''}`
+  const thumbnail = `/api/thumbnail/?path=${encodeURIComponent(asPath)}&size=large${hashedToken ? `&odpt=${hashedToken}` : ''}`
 
   const videoUrl = rawUrl()
 
