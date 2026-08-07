@@ -67,7 +67,7 @@ importers:
         version: 16.2.11(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       next-i18next:
         specifier: ^16.0.0
-        version: 16.0.5(@types/react@19.2.17)(i18next@26.0.9(typescript@6.0.3))(next@16.2.11(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-i18next@17.0.6(i18next@26.0.9(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3))(react@19.2.7)
+        version: 16.0.10(@types/react@19.2.17)(i18next@26.0.9(typescript@6.0.3))(next@16.2.11(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-i18next@17.0.6(i18next@26.0.9(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3))(react@19.2.7)
       nextjs-progressbar:
         specifier: ^0.0.16
         version: 0.0.16(next@16.2.11(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)
@@ -178,6 +178,10 @@ packages:
 
   '@babel/runtime@7.29.2':
     resolution: {integrity: sha512-JiDShH45zKHWyGe4ZNVRrCjBz8Nh9TMmZG1kh4QTK8hCBTWBi8Da+i7s1fJw7/lYpM4ccepSNfqzZ/QvABBi5g==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/runtime@7.29.7':
+    resolution: {integrity: sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==}
     engines: {node: '>=6.9.0'}
 
   '@biomejs/biome@2.4.14':
@@ -1624,8 +1628,8 @@ packages:
     resolution: {integrity: sha512-n5UexwEVt0OoIAhG2MWpSnAVJW1U8mQrQTmXyxc5DMAx+NLhcLZhSMJo/FnUsA5JQ3obTYqTgB7YIuZKWpDgow==}
     hasBin: true
 
-  i18next-resources-to-backend@1.2.1:
-    resolution: {integrity: sha512-okHbVA+HZ7n1/76MsfhPqDou0fptl2dAlhRDu2ideXloRRduzHsqDOznJBef+R3DFZnbvWoBW+KxJ7fnFjd6Yw==}
+  i18next-resources-to-backend@1.2.3:
+    resolution: {integrity: sha512-8Y/LLAm5fqZc2ckQxtTWbu75ndjNLzF7mcYl6rhc4g+WBopIsG3YhdYqF5qhJy64tlYhlU2KSSnEgW3gGHLqwg==}
 
   i18next@26.0.9:
     resolution: {integrity: sha512-htjWlK5lGpjIDJxUdDLD6dO2jPl/RZHBpeZC80T5yr6Lci/tN3Oq9Doh9110ihliAIb4xmb45ngM76WcbP6GjA==}
@@ -2044,8 +2048,8 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  next-i18next@16.0.5:
-    resolution: {integrity: sha512-f9+WycNPxG5ruto1jacLZxlTJGsHGy312x4FpiE3ZUgE5K5peEJedQNBR/TSzkYqmvQ3kCqc94JKbjU88iP+LA==}
+  next-i18next@16.0.10:
+    resolution: {integrity: sha512-nUcp2rL5Y2Iy6IxayF/qY+rrYdQzuvxD+wWHMjabXvFA9i+L8kFXmFkbXI2/4RQ/HwW/MfVEro116Tm0W3vbYA==}
     engines: {node: '>=20'}
     peerDependencies:
       i18next: '>= 23.7.13'
@@ -2736,6 +2740,8 @@ snapshots:
   '@babel/runtime@7.28.6': {}
 
   '@babel/runtime@7.29.2': {}
+
+  '@babel/runtime@7.29.7': {}
 
   '@biomejs/biome@2.4.14':
     optionalDependencies:
@@ -4050,9 +4056,9 @@ snapshots:
     transitivePeerDependencies:
       - '@swc/helpers'
 
-  i18next-resources-to-backend@1.2.1:
+  i18next-resources-to-backend@1.2.3:
     dependencies:
-      '@babel/runtime': 7.29.2
+      '@babel/runtime': 7.29.7
 
   i18next@26.0.9(typescript@6.0.3):
     optionalDependencies:
@@ -4659,12 +4665,12 @@ snapshots:
 
   nanoid@3.3.17: {}
 
-  next-i18next@16.0.5(@types/react@19.2.17)(i18next@26.0.9(typescript@6.0.3))(next@16.2.11(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-i18next@17.0.6(i18next@26.0.9(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3))(react@19.2.7):
+  next-i18next@16.0.10(@types/react@19.2.17)(i18next@26.0.9(typescript@6.0.3))(next@16.2.11(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-i18next@17.0.6(i18next@26.0.9(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3))(react@19.2.7):
     dependencies:
       '@types/hoist-non-react-statics': 3.3.7(@types/react@19.2.17)
       hoist-non-react-statics: 3.3.2
       i18next: 26.0.9(typescript@6.0.3)
-      i18next-resources-to-backend: 1.2.1
+      i18next-resources-to-backend: 1.2.3
       next: 16.2.11(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       react: 19.2.7
       react-i18next: 17.0.6(i18next@26.0.9(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)
