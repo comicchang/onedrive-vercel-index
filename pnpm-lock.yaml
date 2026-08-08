@@ -49,7 +49,7 @@ importers:
         version: 10.6.0
       i18next:
         specifier: ^26.0.0
-        version: 26.0.9(typescript@6.0.3)
+        version: 26.3.6(typescript@6.0.3)
       ioredis:
         specifier: ^5.8.2
         version: 5.10.1
@@ -67,7 +67,7 @@ importers:
         version: 16.2.11(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       next-i18next:
         specifier: ^16.0.0
-        version: 16.0.10(@types/react@19.2.17)(i18next@26.0.9(typescript@6.0.3))(next@16.2.11(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-i18next@17.0.11(i18next@26.0.9(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3))(react@19.2.7)
+        version: 16.0.10(@types/react@19.2.17)(i18next@26.3.6(typescript@6.0.3))(next@16.2.11(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-i18next@17.0.11(i18next@26.3.6(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3))(react@19.2.7)
       nextjs-progressbar:
         specifier: ^0.0.16
         version: 0.0.16(next@16.2.11(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)
@@ -100,7 +100,7 @@ importers:
         version: 5.3.3(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       react-i18next:
         specifier: ^17.0.0
-        version: 17.0.11(i18next@26.0.9(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)
+        version: 17.0.11(i18next@26.3.6(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)
       react-markdown:
         specifier: ^10.1.0
         version: 10.1.0(@types/react@19.2.17)(react@19.2.7)
@@ -149,7 +149,7 @@ importers:
         version: 15.5.13
       i18next-cli:
         specifier: ^1.51.3
-        version: 1.56.10(@swc/helpers@0.5.21)(@types/node@24.13.3)(i18next@26.0.9(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(typescript@6.0.3)
+        version: 1.56.10(@swc/helpers@0.5.21)(@types/node@24.13.3)(i18next@26.3.6(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(typescript@6.0.3)
       prettier:
         specifier: ^3.7.4
         version: 3.8.3
@@ -1634,10 +1634,10 @@ packages:
   i18next-resources-to-backend@1.2.3:
     resolution: {integrity: sha512-8Y/LLAm5fqZc2ckQxtTWbu75ndjNLzF7mcYl6rhc4g+WBopIsG3YhdYqF5qhJy64tlYhlU2KSSnEgW3gGHLqwg==}
 
-  i18next@26.0.9:
-    resolution: {integrity: sha512-htjWlK5lGpjIDJxUdDLD6dO2jPl/RZHBpeZC80T5yr6Lci/tN3Oq9Doh9110ihliAIb4xmb45ngM76WcbP6GjA==}
+  i18next@26.3.6:
+    resolution: {integrity: sha512-Bu5Z2nAXgfVyM8xvW3jk9EKRIuX37PudsrBViThNFx7CR7aaYTpP01cxNB/E4c4UUzTDiAZRstEhsRfPOL/8xA==}
     peerDependencies:
-      typescript: ^5 || ^6
+      typescript: ^5 || ^6 || ^7
     peerDependenciesMeta:
       typescript:
         optional: true
@@ -2155,10 +2155,6 @@ packages:
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
-
-  picomatch@4.0.4:
-    resolution: {integrity: sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==}
-    engines: {node: '>=12'}
 
   picomatch@4.0.5:
     resolution: {integrity: sha512-RvwwcruNjI1ncT5xRakeyS9Lf8lcItv34KD+aif+VH9kduAyfYBipGh12274xtenIPZ119/R9BdTBa8gAwSh0A==}
@@ -3805,9 +3801,9 @@ snapshots:
     dependencies:
       format: 0.2.2
 
-  fdir@6.5.0(picomatch@4.0.4):
+  fdir@6.5.0(picomatch@4.0.5):
     optionalDependencies:
-      picomatch: 4.0.4
+      picomatch: 4.0.5
 
   figures@6.1.0:
     dependencies:
@@ -4024,7 +4020,7 @@ snapshots:
 
   human-signals@8.0.1: {}
 
-  i18next-cli@1.56.10(@swc/helpers@0.5.21)(@types/node@24.13.3)(i18next@26.0.9(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(typescript@6.0.3):
+  i18next-cli@1.56.10(@swc/helpers@0.5.21)(@types/node@24.13.3)(i18next@26.3.6(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(typescript@6.0.3):
     dependencies:
       '@croct/json5-parser': 0.2.2
       '@swc/core': 1.15.33(@swc/helpers@0.5.21)
@@ -4040,7 +4036,7 @@ snapshots:
       minimatch: 10.2.5
       ora: 9.4.0
       react: 19.2.7
-      react-i18next: 17.0.11(i18next@26.0.9(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)
+      react-i18next: 17.0.11(i18next@26.3.6(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)
       yaml: 2.8.4
     transitivePeerDependencies:
       - '@swc/helpers'
@@ -4063,7 +4059,7 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.29.7
 
-  i18next@26.0.9(typescript@6.0.3):
+  i18next@26.3.6(typescript@6.0.3):
     optionalDependencies:
       typescript: 6.0.3
 
@@ -4668,15 +4664,15 @@ snapshots:
 
   nanoid@3.3.17: {}
 
-  next-i18next@16.0.10(@types/react@19.2.17)(i18next@26.0.9(typescript@6.0.3))(next@16.2.11(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-i18next@17.0.11(i18next@26.0.9(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3))(react@19.2.7):
+  next-i18next@16.0.10(@types/react@19.2.17)(i18next@26.3.6(typescript@6.0.3))(next@16.2.11(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-i18next@17.0.11(i18next@26.3.6(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3))(react@19.2.7):
     dependencies:
       '@types/hoist-non-react-statics': 3.3.7(@types/react@19.2.17)
       hoist-non-react-statics: 3.3.2
-      i18next: 26.0.9(typescript@6.0.3)
+      i18next: 26.3.6(typescript@6.0.3)
       i18next-resources-to-backend: 1.2.3
       next: 16.2.11(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       react: 19.2.7
-      react-i18next: 17.0.11(i18next@26.0.9(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)
+      react-i18next: 17.0.11(i18next@26.3.6(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3)
     transitivePeerDependencies:
       - '@types/react'
 
@@ -4787,8 +4783,6 @@ snapshots:
 
   picocolors@1.1.1: {}
 
-  picomatch@4.0.4: {}
-
   picomatch@4.0.5: {}
 
   plyr-react@6.0.0(plyr@3.7.8)(react@19.2.7):
@@ -4895,11 +4889,11 @@ snapshots:
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
 
-  react-i18next@17.0.11(i18next@26.0.9(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3):
+  react-i18next@17.0.11(i18next@26.3.6(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(typescript@6.0.3):
     dependencies:
       '@babel/runtime': 7.29.7
       html-parse-stringify: 4.0.1
-      i18next: 26.0.9(typescript@6.0.3)
+      i18next: 26.3.6(typescript@6.0.3)
       react: 19.2.7
       use-sync-external-store: 1.6.0(react@19.2.7)
     optionalDependencies:
@@ -5185,8 +5179,8 @@ snapshots:
 
   tinyglobby@0.2.17:
     dependencies:
-      fdir: 6.5.0(picomatch@4.0.4)
-      picomatch: 4.0.4
+      fdir: 6.5.0(picomatch@4.0.5)
+      picomatch: 4.0.5
 
   tinyrainbow@3.1.1: {}
 
@@ -5287,7 +5281,7 @@ snapshots:
   vite@8.0.16(@types/node@24.13.3)(jiti@2.7.0)(yaml@2.8.4):
     dependencies:
       lightningcss: 1.32.0
-      picomatch: 4.0.4
+      picomatch: 4.0.5
       postcss: 8.5.15
       rolldown: 1.0.3
       tinyglobby: 0.2.17
