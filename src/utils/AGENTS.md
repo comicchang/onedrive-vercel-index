@@ -47,7 +47,7 @@
 ### External
 - `ioredis` — Redis 客户端（token store）
 - `axios` — HTTP 请求（Graph API）
-- `crypto-js` — clientSecret 解密
+- `js-sha256` — 路由保护密码 SHA256 哈希（同步、浏览器兼容）
 - `swr` — 客户端数据获取
 
 <!-- MANUAL: -->

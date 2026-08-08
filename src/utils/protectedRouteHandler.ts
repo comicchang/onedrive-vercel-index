@@ -1,9 +1,9 @@
-import sha256 from 'crypto-js/sha256'
+import { sha256 } from 'js-sha256'
 import siteConfig from '../../config/site.config'
 
 // Hash password token with SHA256
 function encryptToken(token: string): string {
-  return sha256(token).toString()
+  return sha256(token)
 }
 
 // Fetch stored token from localStorage and encrypt with SHA256
