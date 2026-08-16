@@ -1,6 +1,6 @@
 {
   "name": "onedrive-vercel-index",
-  "packageManager": "pnpm@11.20.0",
+  "packageManager": "pnpm@11.22.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
