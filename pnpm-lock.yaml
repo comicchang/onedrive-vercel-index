@@ -146,7 +146,7 @@ importers:
         version: 15.5.13
       i18next-cli:
         specifier: ^1.67.8
-        version: 1.71.3(@swc/helpers@0.5.23)(@types/node@26.4.1)(react-dom@19.2.8(react@19.2.8))(typescript@7.0.2)
+        version: 1.72.4(@swc/helpers@0.5.23)(@types/node@26.4.1)(react-dom@19.2.8(react@19.2.8))(typescript@7.0.2)
       prettier:
         specifier: ^3.9.6
         version: 3.9.6
@@ -1800,8 +1800,8 @@ packages:
     resolution: {integrity: sha512-eKCa6bwnJhvxj14kZk5NCPc6Hb6BdsU9DZcOnmQKSnO1VKrfV0zCvtttPZUsBvjmNDn8rpcJfpwSYnHBjc95MQ==}
     engines: {node: '>=18.18.0'}
 
-  i18next-cli@1.71.3:
-    resolution: {integrity: sha512-HH8ZoLltCIKB5EYllBPp6Yu2CBqqstrhN6Pz0uElxilAZLxLLSvq3NNPTcbfkBfPbAlKLdBipOs6zuQI6nUnyA==}
+  i18next-cli@1.72.4:
+    resolution: {integrity: sha512-YnyjYSasqZbZCLYQOvk9pvSYZy1ANjq7yG4cJ5Rd2WF99sALUKCCIzvfPXu9OfBgSy4CosSnjg8GZI1c0CrrNA==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -3410,7 +3410,7 @@ snapshots:
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.5
+      '@jridgewell/sourcemap-codec': 1.6.0
       '@jridgewell/trace-mapping': 0.3.31
 
   '@jridgewell/remapping@2.3.5':
@@ -3427,7 +3427,7 @@ snapshots:
   '@jridgewell/trace-mapping@0.3.31':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
-      '@jridgewell/sourcemap-codec': 1.5.5
+      '@jridgewell/sourcemap-codec': 1.6.0
 
   '@napi-rs/wasm-runtime@1.1.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)':
     dependencies:
@@ -4380,7 +4380,7 @@ snapshots:
 
   human-signals@8.0.1: {}
 
-  i18next-cli@1.71.3(@swc/helpers@0.5.23)(@types/node@26.4.1)(react-dom@19.2.8(react@19.2.8))(typescript@7.0.2):
+  i18next-cli@1.72.4(@swc/helpers@0.5.23)(@types/node@26.4.1)(react-dom@19.2.8(react@19.2.8))(typescript@7.0.2):
     dependencies:
       '@croct/json5-parser': 0.2.2
       '@swc/core': 1.16.1(@swc/helpers@0.5.23)
