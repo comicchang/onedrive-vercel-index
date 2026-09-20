@@ -2,3 +2,5 @@ allowBuilds:
   '@swc/core': true
   core-js: true
   es5-ext: true
+minimumReleaseAgeExclude:
+  - katex@0.18.0
