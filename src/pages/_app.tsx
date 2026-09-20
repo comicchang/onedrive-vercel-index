@@ -2,7 +2,8 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import '../styles/globals.css'
 import '../styles/markdown-github.css'
-import { Analytics } from '@vercel/analytics/react';
+import 'office-file-viewer/styles.css'
+import { Analytics } from '@vercel/analytics/react'
 import { config, library, type IconDefinition } from '@fortawesome/fontawesome-svg-core'
 
 config.autoAddCss = false
@@ -117,7 +118,7 @@ library.add(
   faThList,
   faLanguage,
   faPen,
-  ...iconList
+  ...iconList,
 )
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -17,7 +17,7 @@
 | `EPUBPreview.tsx` | EPUB 电子书预览（react-reader） |
 | `ImagePreview.tsx` | 图片预览，支持缩放 |
 | `MarkdownPreview.tsx` | Markdown 渲染（react-markdown + remark-gfm + KaTeX） |
-| `OfficePreview.tsx` | Office 文档预览（preview-office-docs，微软在线预览服务） |
+| `OfficePreview.tsx` | Office 文档预览（office-file-viewer，浏览器端本地解析） |
 | `PDFPreview.tsx` | PDF 文件预览 |
 | `TextPreview.tsx` | 纯文本文件预览 |
 | `URLPreview.tsx` | `.url` 快捷方式文件解析与跳转 |
@@ -32,7 +32,7 @@
 
 ### Testing Requirements
 - 每种预览组件需用对应格式文件手动验证
-- `OfficePreview` 依赖微软在线服务，本地开发无法完整测试
+- `OfficePreview` 使用浏览器端本地解析器，需用对应格式文件手动验证。
 
 ### Common Patterns
 - 各预览组件通过 API 路由 `/api/raw` 获取文件原始内容
@@ -51,6 +51,6 @@
 - `react-markdown` + `remark-gfm` + `rehype-katex` — Markdown 渲染
 - `react-reader` — EPUB 阅读
 - `katex` — 数学公式渲染
-- `preview-office-docs` — Office 文档预览
+- `office-file-viewer` — Office 文档浏览器端解析
 
 <!-- MANUAL: -->
