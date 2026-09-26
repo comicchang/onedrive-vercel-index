@@ -186,7 +186,7 @@ importers:
         version: 2.2.10(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@intity/epub-js':
         specifier: ^0.3.97
-        version: 0.3.98
+        version: 0.3.103
       '@vercel/analytics':
         specifier: ^2.0.1
         version: 2.0.1(next@16.3.6(@types/node@26.6.2)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)
@@ -830,8 +830,8 @@ packages:
   '@internationalized/string@3.2.10':
     resolution: {integrity: sha512-PDx6//vHSpRnHfxqMqto11zQvhsaU74O3mKv2F/0eicGZcl9NLjQmGlbHz/LsJh5tLKp4A4L7ZVTzN1/MmMTvA==}
 
-  '@intity/epub-js@0.3.98':
-    resolution: {integrity: sha512-ljDtKgJZqi736oIXEqF40vsirGSRhEIbjcf830W97Wt2asDoObzKqhMMiF3BLKQ6+BE0QDOdjbk5E0wWsCobVA==}
+  '@intity/epub-js@0.3.103':
+    resolution: {integrity: sha512-LPrPY5slSfrMo2b8xNsIXyOfYsYooDdliUZ+K/MLmtufDgkk/tIdSxyo77eyqy5IfrI3oHyE0Ya4jzINyfTesg==}
 
   '@ioredis/commands@2.0.0':
     resolution: {integrity: sha512-vrx0AE/T0h7cRZwfo1M39Cr+ZhZrkf0V8mQN75wucKCxCLD9l/VX6no3gFvrLqD1IlG/1LtzWovqEw3t0Vr9zg==}
@@ -2190,8 +2190,8 @@ packages:
   markdown-table@3.0.4:
     resolution: {integrity: sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw==}
 
-  marked@18.0.13:
-    resolution: {integrity: sha512-xTxVzZsBFwunP6HDmtBkabUQEYArnP7/rMDGmPj9SlrKlQ4i8MdYVow+nJL0eOqwpUqhzBoTBRADGN6uYwPyOw==}
+  marked@18.0.14:
+    resolution: {integrity: sha512-mBHK6FBHuBAlhgRe88w9F0O1AbwwXJUcQibUbC/QcdTbVGAD7aWza+xt3N6oT/jCZx3/OMeS+8rnuiHZcQ9s7A==}
     engines: {node: '>= 20'}
     hasBin: true
 
@@ -3530,7 +3530,7 @@ snapshots:
     dependencies:
       '@swc/helpers': 0.5.23
 
-  '@intity/epub-js@0.3.98':
+  '@intity/epub-js@0.3.103':
     dependencies:
       assert: 2.1.0
       event-emitter: 0.3.5
@@ -3538,7 +3538,7 @@ snapshots:
       jszip: 3.10.2
       localforage: 1.10.0
       lodash: 4.18.1
-      marked: 18.0.13
+      marked: 18.0.14
       resize-observer: 1.0.4
     transitivePeerDependencies:
       - '@noble/hashes'
@@ -4755,7 +4755,7 @@ snapshots:
 
   markdown-table@3.0.4: {}
 
-  marked@18.0.13: {}
+  marked@18.0.14: {}
 
   math-intrinsics@1.1.0: {}
 
