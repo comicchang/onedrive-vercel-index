@@ -4,3 +4,5 @@ allowBuilds:
   es5-ext: true
 minimumReleaseAgeExclude:
   - katex@0.18.0
+patchedDependencies:
+  '@intity/epub-js@0.3.103': patches/@intity__epub-js@0.3.103.patch

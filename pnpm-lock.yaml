@@ -162,6 +162,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@intity/epub-js@0.3.103': 4049b70c7217ae3a5dfb70cb53a3cc5983b4c554aa6f9114f03967dea761a09f
+
 importers:
 
   .:
@@ -186,7 +189,7 @@ importers:
         version: 2.2.10(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@intity/epub-js':
         specifier: ^0.3.97
-        version: 0.3.103
+        version: 0.3.103(patch_hash=4049b70c7217ae3a5dfb70cb53a3cc5983b4c554aa6f9114f03967dea761a09f)
       '@vercel/analytics':
         specifier: ^2.0.1
         version: 2.0.1(next@16.3.6(@types/node@26.6.2)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)
@@ -3530,7 +3533,7 @@ snapshots:
     dependencies:
       '@swc/helpers': 0.5.23
 
-  '@intity/epub-js@0.3.103':
+  '@intity/epub-js@0.3.103(patch_hash=4049b70c7217ae3a5dfb70cb53a3cc5983b4c554aa6f9114f03967dea761a09f)':
     dependencies:
       assert: 2.1.0
       event-emitter: 0.3.5
