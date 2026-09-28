@@ -4,3 +4,4 @@ allowBuilds:
   es5-ext: true
 minimumReleaseAgeExclude:
   - katex@0.18.0
+  - i18next-cli@1.74.2
