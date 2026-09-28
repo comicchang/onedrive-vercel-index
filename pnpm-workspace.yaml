@@ -5,3 +5,6 @@ allowBuilds:
 minimumReleaseAgeExclude:
   - katex@0.18.0
   - i18next-cli@1.74.2
+
+patchedDependencies:
+  '@intity/epub-js@0.3.103': patches/@intity__epub-js@0.3.103.patch
