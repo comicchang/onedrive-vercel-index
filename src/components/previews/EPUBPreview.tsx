@@ -6,8 +6,7 @@ import Loading from '../Loading'
 import DownloadButtonGroup from '../DownloadBtnGroup'
 import { DownloadBtnContainer } from './Containers'
 import { useRawUrl } from '../../utils/useRawUrl'
-import type Book from '@intity/epub-js/types/book'
-import type Rendition from '@intity/epub-js/types/rendition'
+import type { Book, Rendition } from '@intity/epub-js'
 
 type BookOptions = NonNullable<ConstructorParameters<typeof Book>[1]> & { openAs?: string }
 type RenditionOptions = NonNullable<ConstructorParameters<typeof Rendition>[1]> & { flow?: string }
