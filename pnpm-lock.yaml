@@ -307,7 +307,7 @@ importers:
         version: 15.5.13
       i18next-cli:
         specifier: ^1.67.8
-        version: 1.75.3(@swc/helpers@0.5.23)(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
+        version: 1.77.0(@swc/helpers@0.5.23)(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
       prettier:
         specifier: ^3.9.6
         version: 3.9.10
@@ -493,6 +493,12 @@ packages:
 
   '@floating-ui/utils@0.2.12':
     resolution: {integrity: sha512-HpCo8tmWzLVad5s2d19EhAz5zqrrQ6s69qd6moPMQvkOuSwDT1YgRfWSVuc4ennqrgv3OHppiOGMQ7oC13yIww==}
+
+  '@formatjs/icu-messageformat-parser@3.5.21':
+    resolution: {integrity: sha512-Vnl7IOSyMRaP4Pjv48etkT2nlcIwzh4QWIa3hewzGlZZPBbft+TbMir4MijpDViOLN/1hvkGC10oYMuilsG+fw==}
+
+  '@formatjs/icu-skeleton-parser@2.1.12':
+    resolution: {integrity: sha512-ca7tZMLpfHX3sUD7hP6gE/qr6Iq89EDd3ZLeRhbsB7r0UD55DGJq+tmFLzrGrnx5StahUevQmQQVtbDRHsfDHA==}
 
   '@fortawesome/fontawesome-common-types@7.3.1':
     resolution: {integrity: sha512-k0C0sdHmZtAo6dRDtd1Z/qcpyHbL0CKsjV8seMY/21xGhY5Wsv0XRmiI/xEEH4y2c9b1+jvgNs/3EqhV27yUEA==}
@@ -1937,8 +1943,8 @@ packages:
     resolution: {integrity: sha512-eKCa6bwnJhvxj14kZk5NCPc6Hb6BdsU9DZcOnmQKSnO1VKrfV0zCvtttPZUsBvjmNDn8rpcJfpwSYnHBjc95MQ==}
     engines: {node: '>=18.18.0'}
 
-  i18next-cli@1.75.3:
-    resolution: {integrity: sha512-JsQ9i0nVD2YhZEYpVcHAJuZ/jUjfiX5iD8JbIwb8OnzMNWeXySv1TKvTigsGBrfJ4Q6AVh1pNVOMrwTXHAUzaw==}
+  i18next-cli@1.77.0:
+    resolution: {integrity: sha512-7gn/2P4QFm7pb/sWvBg9Qr7r8fZyoozhJ9MvgYuBPX/aPUrniMKnhAT2iZHAv++Yg6wRJqnP7KIJsiHcP3Mt8A==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -1951,6 +1957,14 @@ packages:
 
   i18next@26.4.7:
     resolution: {integrity: sha512-p/3hqy6EcuqRs6wNwBYwGGC1fzBJSMxV9zMuN814ab/7QjdZbXfjXwuPZdQbngX6KDOTxM01uUiZyqmMB8ghZg==}
+    peerDependencies:
+      typescript: ^5 || ^6 || ^7
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  i18next@26.5.0:
+    resolution: {integrity: sha512-OwFFD3ER/BSWsv40teDtkhG7fwgncd7cq1CX7el02IENW9ZiwfWLnMjsQGD/q3SExrxp0+QxwUqXL8F9BKu5+w==}
     peerDependencies:
       typescript: ^5 || ^6 || ^7
     peerDependenciesMeta:
@@ -2184,9 +2198,6 @@ packages:
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
-  magic-string@1.4.2:
-    resolution: {integrity: sha512-vG+rjFRj1PqdIBozIxAGMjPlOhaVe+GXpbttY/iSK7rGcJRMlwNJO7dcUwmUqkymsFLJiNGI06t4D7Fr7yRC9g==}
-
   magic-string@1.4.3:
     resolution: {integrity: sha512-z12OxmaPGE0F4xlpGdjuAUckipLpQlTAuAmyGhNoD7ODpYUzvDfvtxUbjM/jwznyP178oju/KDdyi220wNJ0RQ==}
 
@@ -2252,6 +2263,10 @@ packages:
 
   mdn-data@2.27.1:
     resolution: {integrity: sha512-9Yubnt3e8A0OKwxYSXyhLymGW4sCufcLG6VdiDdUGVkPhpqLxlvP5vl1983gQjJl3tqbrM731mjaZaP68AgosQ==}
+
+  messageformat@4.1.0:
+    resolution: {integrity: sha512-ZLId0BYfsNhC6/MRwVFw1yTLgG9cbJwfTsjYSS2C59PdfJWVRsX7hthADvsXefBtTg2FKso0VAJmMJJOtnJ75w==}
+    engines: {node: ^20.19 || ^22.12 || >=24}
 
   micromark-core-commonmark@2.0.3:
     resolution: {integrity: sha512-RDBrHEMSxVFLg6xvnXmb1Ayr2WzLAWjeSATAoxwKYJV94TeNavgoIdA0a9ytzDSVzBy2YKFK+emCPOEibLeCrg==}
@@ -2662,6 +2677,22 @@ packages:
 
   react-i18next@17.0.16:
     resolution: {integrity: sha512-7uImVD9hG5yUOaP5KHVied1x0A004Di/KU031ULR35Ma+9e9H5GdnNZHgQEIByyAz+IAXBkRDTedNVzjPUH8ZA==}
+    peerDependencies:
+      i18next: '>= 26.2.0'
+      react: '>= 16.8.0'
+      react-dom: '*'
+      react-native: '*'
+      typescript: ^5 || ^6 || ^7
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+      typescript:
+        optional: true
+
+  react-i18next@17.1.0:
+    resolution: {integrity: sha512-4VouOnTDyvhvqXx6WZ+s3/cgSiaLutILdYkO3P1Ms+4qcKR7At+JP4Vi7IeHkVLyVV+DmN1l23Pn73UcwSGGPA==}
     peerDependencies:
       i18next: '>= 26.2.0'
       react: '>= 16.8.0'
@@ -3256,6 +3287,12 @@ snapshots:
       tabbable: 6.5.0
 
   '@floating-ui/utils@0.2.12': {}
+
+  '@formatjs/icu-messageformat-parser@3.5.21':
+    dependencies:
+      '@formatjs/icu-skeleton-parser': 2.1.12
+
+  '@formatjs/icu-skeleton-parser@2.1.12': {}
 
   '@fortawesome/fontawesome-common-types@7.3.1': {}
 
@@ -4478,23 +4515,25 @@ snapshots:
 
   human-signals@8.0.1: {}
 
-  i18next-cli@1.75.3(@swc/helpers@0.5.23)(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2):
+  i18next-cli@1.77.0(@swc/helpers@0.5.23)(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2):
     dependencies:
       '@croct/json5-parser': 0.2.2
+      '@formatjs/icu-messageformat-parser': 3.5.21
       '@swc/core': 1.16.2(@swc/helpers@0.5.23)
       chokidar: 5.0.0
       commander: 15.0.0
       execa: 10.0.1
       glob: 13.0.6
-      i18next: 26.4.7(typescript@7.0.2)
+      i18next: 26.5.0(typescript@7.0.2)
       i18next-resources-for-ts: 2.1.1(@swc/helpers@0.5.23)
       inquirer: 14.2.2(@types/node@26.6.5)
       jiti: 2.7.0
       jsonc-parser: 3.3.1
-      magic-string: 1.4.2
+      magic-string: 1.4.3
+      messageformat: 4.1.0
       minimatch: 10.2.6
       ora: 9.4.1
-      react-i18next: 17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
+      react-i18next: 17.1.0(i18next@26.5.0(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
       yaml: 2.9.1
     transitivePeerDependencies:
       - '@swc/helpers'
@@ -4518,6 +4557,10 @@ snapshots:
       '@babel/runtime': 7.29.7
 
   i18next@26.4.7(typescript@7.0.2):
+    optionalDependencies:
+      typescript: 7.0.2
+
+  i18next@26.5.0(typescript@7.0.2):
     optionalDependencies:
       typescript: 7.0.2
 
@@ -4743,10 +4786,6 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  magic-string@1.4.2:
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.6.0
-
   magic-string@1.4.3:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.6.0
@@ -4923,6 +4962,8 @@ snapshots:
       '@types/mdast': 4.0.4
 
   mdn-data@2.27.1: {}
+
+  messageformat@4.1.0: {}
 
   micromark-core-commonmark@2.0.3:
     dependencies:
@@ -5396,6 +5437,17 @@ snapshots:
       '@babel/runtime': 7.29.7
       html-parse-stringify: 4.0.1
       i18next: 26.4.7(typescript@7.0.2)
+      react: 19.3.1
+      use-sync-external-store: 1.6.0(react@19.3.1)
+    optionalDependencies:
+      react-dom: 19.3.1(react@19.3.1)
+      typescript: 7.0.2
+
+  react-i18next@17.1.0(i18next@26.5.0(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2):
+    dependencies:
+      '@babel/runtime': 7.29.7
+      html-parse-stringify: 4.0.1
+      i18next: 26.5.0(typescript@7.0.2)
       react: 19.3.1
       use-sync-external-store: 1.6.0(react@19.3.1)
     optionalDependencies:
