@@ -183,16 +183,16 @@ importers:
         version: 7.3.1
       '@fortawesome/react-fontawesome':
         specifier: ^3.5.0
-        version: 3.5.0(@fortawesome/fontawesome-svg-core@7.3.1)(react@19.3.0)
+        version: 3.5.0(@fortawesome/fontawesome-svg-core@7.3.1)(react@19.3.1)
       '@headlessui/react':
         specifier: ^2.2.10
-        version: 2.2.10(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        version: 2.2.10(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@intity/epub-js':
         specifier: ^0.3.97
         version: 0.3.103(patch_hash=4049b70c7217ae3a5dfb70cb53a3cc5983b4c554aa6f9114f03967dea761a09f)
       '@vercel/analytics':
         specifier: ^2.0.1
-        version: 2.0.1(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)
+        version: 2.0.1(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)
       axios:
         specifier: ^1.19.0
         version: 1.20.0(debug@4.4.3)
@@ -225,49 +225,49 @@ importers:
         version: 1.8.2
       next:
         specifier: ^16.3.0
-        version: 16.4.2(@types/node@26.6.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        version: 16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       next-i18next:
         specifier: ^16.0.10
-        version: 16.3.2(@types/react@19.3.0)(i18next@26.4.7(typescript@7.0.2))(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-i18next@17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@7.0.2))(react@19.3.0)
+        version: 16.3.2(@types/react@19.3.0)(i18next@26.4.7(typescript@7.0.2))(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-i18next@17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2))(react@19.3.1)
       nextjs-progressbar:
         specifier: ^0.0.16
-        version: 0.0.16(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)
+        version: 0.0.16(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)
       plyr-react:
         specifier: ^6.0.0
-        version: 6.0.0(plyr@3.7.8)(react@19.3.0)
+        version: 6.0.0(plyr@3.7.8)(react@19.3.1)
       preview-office-docs:
         specifier: ^1.0.2
-        version: 1.0.2(react@19.3.0)
+        version: 1.0.2(react@19.3.1)
       react:
         specifier: ^19.2.8
-        version: 19.3.0
+        version: 19.3.1
       react-async-hook:
         specifier: ^4.0.0
-        version: 4.0.0(react@19.3.0)
+        version: 4.0.0(react@19.3.1)
       react-audio-player:
         specifier: ^0.17.0
-        version: 0.17.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        version: 0.17.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       react-cookie:
         specifier: ^8.1.2
-        version: 8.1.2(@types/react@19.3.0)(react@19.3.0)
+        version: 8.1.2(@types/react@19.3.0)(react@19.3.1)
       react-dom:
         specifier: ^19.2.8
-        version: 19.3.0(react@19.3.0)
+        version: 19.3.1(react@19.3.1)
       react-hot-toast:
         specifier: ^2.6.0
-        version: 2.6.1(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        version: 2.6.1(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       react-hotkeys-hook:
         specifier: ^5.3.3
-        version: 5.3.3(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        version: 5.3.3(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       react-i18next:
         specifier: ^17.0.11
-        version: 17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@7.0.2)
+        version: 17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
       react-markdown:
         specifier: ^10.1.0
-        version: 10.1.0(@types/react@19.3.0)(react@19.3.0)
+        version: 10.1.0(@types/react@19.3.0)(react@19.3.1)
       react-syntax-highlighter:
         specifier: ^16.1.1
-        version: 16.1.2(react@19.3.0)
+        version: 16.1.2(react@19.3.1)
       rehype-katex:
         specifier: ^7.0.1
         version: 7.0.1
@@ -282,7 +282,7 @@ importers:
         version: 6.0.0
       swr:
         specifier: ^2.5.0
-        version: 2.5.1(react@19.3.0)
+        version: 2.5.1(react@19.3.1)
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.5.7
@@ -307,7 +307,7 @@ importers:
         version: 15.5.13
       i18next-cli:
         specifier: ^1.67.8
-        version: 1.75.3(@swc/helpers@0.5.23)(@types/node@26.6.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@7.0.2)
+        version: 1.75.3(@swc/helpers@0.5.23)(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
       prettier:
         specifier: ^3.9.6
         version: 3.9.10
@@ -2635,10 +2635,10 @@ packages:
     peerDependencies:
       react: '>= 16.3.0'
 
-  react-dom@19.3.0:
-    resolution: {integrity: sha512-JDk8dgif51OjFoDE70+OT9ICyYr+69HlmihNwp1+Nsfbna3t5sIiCa9ZJktDmQ4/1b/rn26hIAR2uYXDMr5r0Q==}
+  react-dom@19.3.1:
+    resolution: {integrity: sha512-Y0bARz53lhEC1NMCASs0/j+faB/zqt3R8hpvg1e8+61ZVJ4UL0UdC4cBbXfZMcIuhrfgeILTLe+ZeBCavQPtKQ==}
     peerDependencies:
-      react: ^19.3.0
+      react: ^19.3.1
 
   react-hot-toast@2.6.1:
     resolution: {integrity: sha512-gjFsf05dxcku0FkyMtFH+XmYFdA2odXfBVknEr/IZ+XpUjwsgvtY2616sOpUynK+l9ykQDRNpaJ1hYfuximUiA==}
@@ -2696,8 +2696,8 @@ packages:
     peerDependencies:
       react: '>= 0.14.0'
 
-  react@19.3.0:
-    resolution: {integrity: sha512-E8LUcbtBWt20bbl2YoHfx4ZDBdxVTfOKtCZn9cDSJ4l6/nuoApcpIBcj47t2wZoVX8g2ZHuMHbiShgCR1T5Sog==}
+  react@19.3.1:
+    resolution: {integrity: sha512-QNhWdt7nrgVWWQG58QuGsAR3jv3Hbe4mb4vz7w2csnHavciZJgda1CPNaldF6eVxv90ud3jUXpKlHL69gO38yw==}
     engines: {node: '>=0.10.0'}
 
   readable-stream@2.3.8:
@@ -3241,18 +3241,18 @@ snapshots:
       '@floating-ui/core': 1.8.0
       '@floating-ui/utils': 0.2.12
 
-  '@floating-ui/react-dom@2.1.9(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@floating-ui/react-dom@2.1.9(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
       '@floating-ui/dom': 1.8.0
-      react: 19.3.0
-      react-dom: 19.3.0(react@19.3.0)
+      react: 19.3.1
+      react-dom: 19.3.1(react@19.3.1)
 
-  '@floating-ui/react@0.26.28(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@floating-ui/react@0.26.28(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
-      '@floating-ui/react-dom': 2.1.9(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@floating-ui/react-dom': 2.1.9(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@floating-ui/utils': 0.2.12
-      react: 19.3.0
-      react-dom: 19.3.0(react@19.3.0)
+      react: 19.3.1
+      react-dom: 19.3.1(react@19.3.1)
       tabbable: 6.5.0
 
   '@floating-ui/utils@0.2.12': {}
@@ -3275,20 +3275,20 @@ snapshots:
     dependencies:
       '@fortawesome/fontawesome-common-types': 7.3.1
 
-  '@fortawesome/react-fontawesome@3.5.0(@fortawesome/fontawesome-svg-core@7.3.1)(react@19.3.0)':
+  '@fortawesome/react-fontawesome@3.5.0(@fortawesome/fontawesome-svg-core@7.3.1)(react@19.3.1)':
     dependencies:
       '@fortawesome/fontawesome-svg-core': 7.3.1
-      react: 19.3.0
+      react: 19.3.1
 
-  '@headlessui/react@2.2.10(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@headlessui/react@2.2.10(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
-      '@floating-ui/react': 0.26.28(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      '@react-aria/focus': 3.22.1(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      '@react-aria/interactions': 3.28.1(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      '@tanstack/react-virtual': 3.14.9(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      react: 19.3.0
-      react-dom: 19.3.0(react@19.3.0)
-      use-sync-external-store: 1.6.0(react@19.3.0)
+      '@floating-ui/react': 0.26.28(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@react-aria/focus': 3.22.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@react-aria/interactions': 3.28.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@tanstack/react-virtual': 3.14.9(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      react: 19.3.1
+      react-dom: 19.3.1(react@19.3.1)
+      use-sync-external-store: 1.6.0(react@19.3.1)
 
   '@img/colour@1.1.0':
     optional: true
@@ -3600,24 +3600,24 @@ snapshots:
 
   '@oxc-project/types@0.133.0': {}
 
-  '@react-aria/focus@3.22.1(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@react-aria/focus@3.22.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
       '@swc/helpers': 0.5.23
-      react: 19.3.0
-      react-aria: 3.51.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      react-dom: 19.3.0(react@19.3.0)
+      react: 19.3.1
+      react-aria: 3.51.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      react-dom: 19.3.1(react@19.3.1)
 
-  '@react-aria/interactions@3.28.1(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@react-aria/interactions@3.28.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
-      '@react-types/shared': 3.36.1(react@19.3.0)
+      '@react-types/shared': 3.36.1(react@19.3.1)
       '@swc/helpers': 0.5.23
-      react: 19.3.0
-      react-aria: 3.51.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      react-dom: 19.3.0(react@19.3.0)
+      react: 19.3.1
+      react-aria: 3.51.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      react-dom: 19.3.1(react@19.3.1)
 
-  '@react-types/shared@3.36.1(react@19.3.0)':
+  '@react-types/shared@3.36.1(react@19.3.1)':
     dependencies:
-      react: 19.3.0
+      react: 19.3.1
 
   '@rolldown/binding-android-arm64@1.0.3':
     optional: true
@@ -3808,11 +3808,11 @@ snapshots:
       postcss: 8.5.26
       tailwindcss: 4.3.3
 
-  '@tanstack/react-virtual@3.14.9(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@tanstack/react-virtual@3.14.9(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
       '@tanstack/virtual-core': 3.17.7
-      react: 19.3.0
-      react-dom: 19.3.0(react@19.3.0)
+      react: 19.3.1
+      react-dom: 19.3.1(react@19.3.1)
 
   '@tanstack/virtual-core@3.17.7': {}
 
@@ -3945,10 +3945,10 @@ snapshots:
 
   '@ungap/structured-clone@1.3.3': {}
 
-  '@vercel/analytics@2.0.1(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)':
+  '@vercel/analytics@2.0.1(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)':
     optionalDependencies:
-      next: 16.4.2(@types/node@26.6.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      react: 19.3.0
+      next: 16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      react: 19.3.1
 
   '@vitest/mocker@5.0.5(vite@8.0.16(@types/node@26.6.5)(jiti@2.7.0)(yaml@2.9.1))':
     dependencies:
@@ -4478,7 +4478,7 @@ snapshots:
 
   human-signals@8.0.1: {}
 
-  i18next-cli@1.75.3(@swc/helpers@0.5.23)(@types/node@26.6.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@7.0.2):
+  i18next-cli@1.75.3(@swc/helpers@0.5.23)(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2):
     dependencies:
       '@croct/json5-parser': 0.2.2
       '@swc/core': 1.16.2(@swc/helpers@0.5.23)
@@ -4494,7 +4494,7 @@ snapshots:
       magic-string: 1.4.2
       minimatch: 10.2.6
       ora: 9.4.1
-      react-i18next: 17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@7.0.2)
+      react-i18next: 17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
       yaml: 2.9.1
     transitivePeerDependencies:
       - '@swc/helpers'
@@ -5152,30 +5152,30 @@ snapshots:
 
   nanoid@3.3.18: {}
 
-  next-i18next@16.3.2(@types/react@19.3.0)(i18next@26.4.7(typescript@7.0.2))(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-i18next@17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@7.0.2))(react@19.3.0):
+  next-i18next@16.3.2(@types/react@19.3.0)(i18next@26.4.7(typescript@7.0.2))(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-i18next@17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2))(react@19.3.1):
     dependencies:
       '@types/hoist-non-react-statics': 3.3.7(@types/react@19.3.0)
       hoist-non-react-statics: 3.3.2
       i18next: 26.4.7(typescript@7.0.2)
       i18next-resources-to-backend: 1.2.3
-      next: 16.4.2(@types/node@26.6.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      react: 19.3.0
-      react-i18next: 17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@7.0.2)
+      next: 16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      react: 19.3.1
+      react-i18next: 17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
     transitivePeerDependencies:
       - '@types/react'
 
   next-tick@1.1.0: {}
 
-  next@16.4.2(@types/node@26.6.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
+  next@16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
     dependencies:
       '@next/env': 16.4.2
       '@swc/helpers': 0.5.23
       baseline-browser-mapping: 2.11.19
       caniuse-lite: 1.0.30001809
       postcss: 8.5.23
-      react: 19.3.0
-      react-dom: 19.3.0(react@19.3.0)
-      styled-jsx: 5.1.6(react@19.3.0)
+      react: 19.3.1
+      react-dom: 19.3.1(react@19.3.1)
+      styled-jsx: 5.1.6(react@19.3.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 16.4.2
       '@next/swc-darwin-x64': 16.4.2
@@ -5191,13 +5191,13 @@ snapshots:
       - '@types/node'
       - babel-plugin-macros
 
-  nextjs-progressbar@0.0.16(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0):
+  nextjs-progressbar@0.0.16(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1):
     dependencies:
       '@types/nprogress': 0.2.3
-      next: 16.4.2(@types/node@26.6.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      next: 16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       nprogress: 0.2.0
       prop-types: 15.8.1
-      react: 19.3.0
+      react: 19.3.1
 
   npm-run-path@6.0.0:
     dependencies:
@@ -5274,11 +5274,11 @@ snapshots:
 
   picomatch@4.0.7: {}
 
-  plyr-react@6.0.0(plyr@3.7.8)(react@19.3.0):
+  plyr-react@6.0.0(plyr@3.7.8)(react@19.3.1):
     dependencies:
       plyr: 3.7.8
-      react: 19.3.0
-      react-aptor: 2.0.0(react@19.3.0)
+      react: 19.3.1
+      react-aptor: 2.0.0(react@19.3.1)
 
   plyr@3.7.8:
     dependencies:
@@ -5312,9 +5312,9 @@ snapshots:
     dependencies:
       parse-ms: 4.0.0
 
-  preview-office-docs@1.0.2(react@19.3.0):
+  preview-office-docs@1.0.2(react@19.3.1):
     dependencies:
-      react: 19.3.0
+      react: 19.3.1
 
   prismjs@1.30.0: {}
 
@@ -5334,77 +5334,77 @@ snapshots:
 
   rangetouch@2.0.1: {}
 
-  react-aptor@2.0.0(react@19.3.0):
+  react-aptor@2.0.0(react@19.3.1):
     optionalDependencies:
-      react: 19.3.0
+      react: 19.3.1
 
-  react-aria@3.51.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
+  react-aria@3.51.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
     dependencies:
       '@internationalized/date': 3.12.3
       '@internationalized/number': 3.6.7
       '@internationalized/string': 3.2.10
-      '@react-types/shared': 3.36.1(react@19.3.0)
+      '@react-types/shared': 3.36.1(react@19.3.1)
       '@swc/helpers': 0.5.23
       aria-hidden: 1.2.6
       clsx: 2.1.1
-      react: 19.3.0
-      react-dom: 19.3.0(react@19.3.0)
-      react-stately: 3.49.0(react@19.3.0)
-      use-sync-external-store: 1.6.0(react@19.3.0)
+      react: 19.3.1
+      react-dom: 19.3.1(react@19.3.1)
+      react-stately: 3.49.0(react@19.3.1)
+      use-sync-external-store: 1.6.0(react@19.3.1)
 
-  react-async-hook@4.0.0(react@19.3.0):
+  react-async-hook@4.0.0(react@19.3.1):
     dependencies:
-      react: 19.3.0
+      react: 19.3.1
 
-  react-audio-player@0.17.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
+  react-audio-player@0.17.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
     dependencies:
       prop-types: 15.8.1
-      react: 19.3.0
-      react-dom: 19.3.0(react@19.3.0)
+      react: 19.3.1
+      react-dom: 19.3.1(react@19.3.1)
 
-  react-cookie@8.1.2(@types/react@19.3.0)(react@19.3.0):
+  react-cookie@8.1.2(@types/react@19.3.0)(react@19.3.1):
     dependencies:
       '@types/hoist-non-react-statics': 3.3.7(@types/react@19.3.0)
       hoist-non-react-statics: 3.3.2
-      react: 19.3.0
+      react: 19.3.1
       universal-cookie: 8.1.2
     transitivePeerDependencies:
       - '@types/react'
 
-  react-dom@19.3.0(react@19.3.0):
+  react-dom@19.3.1(react@19.3.1):
     dependencies:
-      react: 19.3.0
+      react: 19.3.1
       scheduler: 0.28.0
 
-  react-hot-toast@2.6.1(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
+  react-hot-toast@2.6.1(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
     dependencies:
       csstype: 3.2.3
       goober: 2.1.19(csstype@3.2.3)
-      react: 19.3.0
-      react-dom: 19.3.0(react@19.3.0)
+      react: 19.3.1
+      react-dom: 19.3.1(react@19.3.1)
     optionalDependencies:
       '@types/react': 19.3.0
       '@types/react-dom': 19.3.0(@types/react@19.3.0)
 
-  react-hotkeys-hook@5.3.3(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
+  react-hotkeys-hook@5.3.3(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
     dependencies:
-      react: 19.3.0
-      react-dom: 19.3.0(react@19.3.0)
+      react: 19.3.1
+      react-dom: 19.3.1(react@19.3.1)
 
-  react-i18next@17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@7.0.2):
+  react-i18next@17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2):
     dependencies:
       '@babel/runtime': 7.29.7
       html-parse-stringify: 4.0.1
       i18next: 26.4.7(typescript@7.0.2)
-      react: 19.3.0
-      use-sync-external-store: 1.6.0(react@19.3.0)
+      react: 19.3.1
+      use-sync-external-store: 1.6.0(react@19.3.1)
     optionalDependencies:
-      react-dom: 19.3.0(react@19.3.0)
+      react-dom: 19.3.1(react@19.3.1)
       typescript: 7.0.2
 
   react-is@16.13.1: {}
 
-  react-markdown@10.1.0(@types/react@19.3.0)(react@19.3.0):
+  react-markdown@10.1.0(@types/react@19.3.0)(react@19.3.1):
     dependencies:
       '@types/hast': 3.0.5
       '@types/mdast': 4.0.4
@@ -5413,7 +5413,7 @@ snapshots:
       hast-util-to-jsx-runtime: 2.3.6
       html-url-attributes: 3.0.1
       mdast-util-to-hast: 13.2.1
-      react: 19.3.0
+      react: 19.3.1
       remark-parse: 11.0.0
       remark-rehype: 11.1.2
       unified: 11.0.5
@@ -5422,27 +5422,27 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  react-stately@3.49.0(react@19.3.0):
+  react-stately@3.49.0(react@19.3.1):
     dependencies:
       '@internationalized/date': 3.12.3
       '@internationalized/number': 3.6.7
       '@internationalized/string': 3.2.10
-      '@react-types/shared': 3.36.1(react@19.3.0)
+      '@react-types/shared': 3.36.1(react@19.3.1)
       '@swc/helpers': 0.5.23
-      react: 19.3.0
-      use-sync-external-store: 1.6.0(react@19.3.0)
+      react: 19.3.1
+      use-sync-external-store: 1.6.0(react@19.3.1)
 
-  react-syntax-highlighter@16.1.2(react@19.3.0):
+  react-syntax-highlighter@16.1.2(react@19.3.1):
     dependencies:
       '@babel/runtime': 7.29.7
       highlight.js: 10.7.3
       highlightjs-vue: 1.0.0
       lowlight: 1.20.0
       prismjs: 1.30.0
-      react: 19.3.0
+      react: 19.3.1
       refractor: 5.0.0
 
-  react@19.3.0: {}
+  react@19.3.1: {}
 
   readable-stream@2.3.8:
     dependencies:
@@ -5660,16 +5660,16 @@ snapshots:
     dependencies:
       inline-style-parser: 0.2.7
 
-  styled-jsx@5.1.6(react@19.3.0):
+  styled-jsx@5.1.6(react@19.3.1):
     dependencies:
       client-only: 0.0.1
-      react: 19.3.0
+      react: 19.3.1
 
-  swr@2.5.1(react@19.3.0):
+  swr@2.5.1(react@19.3.1):
     dependencies:
       dequal: 2.0.3
-      react: 19.3.0
-      use-sync-external-store: 1.6.0(react@19.3.0)
+      react: 19.3.1
+      use-sync-external-store: 1.6.0(react@19.3.1)
 
   symbol-tree@3.2.4: {}
 
@@ -5788,9 +5788,9 @@ snapshots:
 
   url-polyfill@1.1.14: {}
 
-  use-sync-external-store@1.6.0(react@19.3.0):
+  use-sync-external-store@1.6.0(react@19.3.1):
     dependencies:
-      react: 19.3.0
+      react: 19.3.1
 
   util-deprecate@1.0.2: {}
 
