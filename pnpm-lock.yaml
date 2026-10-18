@@ -207,7 +207,7 @@ importers:
         version: 11.0.0
       i18next:
         specifier: ^26.3.6
-        version: 26.4.7(typescript@7.0.2)
+        version: 26.5.2(typescript@7.0.2)
       ioredis:
         specifier: ^6.0.0
         version: 6.0.0
@@ -228,7 +228,7 @@ importers:
         version: 16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       next-i18next:
         specifier: ^16.0.10
-        version: 16.3.2(@types/react@19.3.0)(i18next@26.4.7(typescript@7.0.2))(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-i18next@17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2))(react@19.3.1)
+        version: 16.3.2(@types/react@19.3.0)(i18next@26.5.2(typescript@7.0.2))(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-i18next@17.0.16(i18next@26.5.2(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2))(react@19.3.1)
       nextjs-progressbar:
         specifier: ^0.0.16
         version: 0.0.16(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)
@@ -261,7 +261,7 @@ importers:
         version: 5.3.3(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       react-i18next:
         specifier: ^17.0.11
-        version: 17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
+        version: 17.0.16(i18next@26.5.2(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
       react-markdown:
         specifier: ^10.1.0
         version: 10.1.0(@types/react@19.3.0)(react@19.3.1)
@@ -1951,6 +1951,14 @@ packages:
 
   i18next@26.4.7:
     resolution: {integrity: sha512-p/3hqy6EcuqRs6wNwBYwGGC1fzBJSMxV9zMuN814ab/7QjdZbXfjXwuPZdQbngX6KDOTxM01uUiZyqmMB8ghZg==}
+    peerDependencies:
+      typescript: ^5 || ^6 || ^7
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  i18next@26.5.2:
+    resolution: {integrity: sha512-6fIXt//2MZNok3tULyjnypxe3vbsy3pV1bVg8p2x3yKrzZvp7z3T+wXx/88LQsATRdhyJeAUAvUxEtxsHdJ29w==}
     peerDependencies:
       typescript: ^5 || ^6 || ^7
     peerDependenciesMeta:
@@ -4521,6 +4529,10 @@ snapshots:
     optionalDependencies:
       typescript: 7.0.2
 
+  i18next@26.5.2(typescript@7.0.2):
+    optionalDependencies:
+      typescript: 7.0.2
+
   iconv-lite@0.7.3:
     dependencies:
       safer-buffer: 2.1.2
@@ -5152,15 +5164,15 @@ snapshots:
 
   nanoid@3.3.18: {}
 
-  next-i18next@16.3.2(@types/react@19.3.0)(i18next@26.4.7(typescript@7.0.2))(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-i18next@17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2))(react@19.3.1):
+  next-i18next@16.3.2(@types/react@19.3.0)(i18next@26.5.2(typescript@7.0.2))(next@16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-i18next@17.0.16(i18next@26.5.2(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2))(react@19.3.1):
     dependencies:
       '@types/hoist-non-react-statics': 3.3.7(@types/react@19.3.0)
       hoist-non-react-statics: 3.3.2
-      i18next: 26.4.7(typescript@7.0.2)
+      i18next: 26.5.2(typescript@7.0.2)
       i18next-resources-to-backend: 1.2.3
       next: 16.4.2(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       react: 19.3.1
-      react-i18next: 17.0.16(i18next@26.4.7(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
+      react-i18next: 17.0.16(i18next@26.5.2(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
     transitivePeerDependencies:
       - '@types/react'
 
@@ -5396,6 +5408,17 @@ snapshots:
       '@babel/runtime': 7.29.7
       html-parse-stringify: 4.0.1
       i18next: 26.4.7(typescript@7.0.2)
+      react: 19.3.1
+      use-sync-external-store: 1.6.0(react@19.3.1)
+    optionalDependencies:
+      react-dom: 19.3.1(react@19.3.1)
+      typescript: 7.0.2
+
+  react-i18next@17.0.16(i18next@26.5.2(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2):
+    dependencies:
+      '@babel/runtime': 7.29.7
+      html-parse-stringify: 4.0.1
+      i18next: 26.5.2(typescript@7.0.2)
       react: 19.3.1
       use-sync-external-store: 1.6.0(react@19.3.1)
     optionalDependencies:
