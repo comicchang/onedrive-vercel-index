@@ -1,0 +1,28 @@
+diff --git a/src/js/plyr.d.ts b/src/js/plyr.d.ts
+index 5d8faf8189e507cc9dbee4c08f455df6bb52f044..9ed65881aefc9460f845630513e877972e51208c 100644
+--- a/src/js/plyr.d.ts
++++ b/src/js/plyr.d.ts
+@@ -331,7 +331,7 @@ declare namespace Plyr {
+     toggle(): void;
+   }
+ 
+-  interface Options {
++  export interface Options {
+     /**
+      * Completely disable Plyr. This would allow you to do a User Agent check or similar to programmatically enable or disable Plyr for a certain UA. Example below.
+      */
+@@ -636,7 +636,7 @@ declare namespace Plyr {
+     wrapper: HTMLElement | null;
+   }
+ 
+-  interface SourceInfo {
++  export interface SourceInfo {
+     /**
+      * Note: YouTube and Vimeo are currently not supported as audio sources.
+      */
+@@ -732,4 +732,4 @@ declare namespace Plyr {
+ }
+ 
+ export as namespace Plyr;
+-export default Plyr;
++export = Plyr;
