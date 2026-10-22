@@ -5,8 +5,9 @@ allowBuilds:
   plyr: false
 minimumReleaseAgeExclude:
   - katex@0.18.0
-  - i18next-cli@1.74.2 || 1.78.0
+  - i18next-cli@1.74.2 || 1.78.0 || 1.80.0
   - react-i18next@17.1.1
+  - i18next@26.5.5
 
 patchedDependencies:
   '@intity/epub-js@0.3.103': patches/@intity__epub-js@0.3.103.patch
