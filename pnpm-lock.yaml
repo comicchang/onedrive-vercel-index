@@ -307,8 +307,8 @@ importers:
         specifier: ^15.5.13
         version: 15.5.13
       i18next-cli:
-        specifier: 1.78.0
-        version: 1.78.0(@swc/helpers@0.5.23)(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
+        specifier: 1.80.0
+        version: 1.80.0(@swc/helpers@0.5.23)(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2)
       prettier:
         specifier: ^3.9.10
         version: 3.9.10
@@ -1921,8 +1921,8 @@ packages:
     resolution: {integrity: sha512-eKCa6bwnJhvxj14kZk5NCPc6Hb6BdsU9DZcOnmQKSnO1VKrfV0zCvtttPZUsBvjmNDn8rpcJfpwSYnHBjc95MQ==}
     engines: {node: '>=18.18.0'}
 
-  i18next-cli@1.78.0:
-    resolution: {integrity: sha512-GdqP71tpQjDXSLO418lD2/Gf4pF2ok9F0wjJk6EayVKFJoigDZqIeAxeI5QF+BdxPXJBoWAbUver3m6A4w4K6w==}
+  i18next-cli@1.80.0:
+    resolution: {integrity: sha512-MA4OtqhNvLiETR6AANaYnqd1k52JZo/7fY6coIFRYK9GZ8dcNqRiLZ87BoqARolL5//AG/mLvjib0yX8JZ47Gg==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -4513,7 +4513,7 @@ snapshots:
 
   human-signals@8.0.1: {}
 
-  i18next-cli@1.78.0(@swc/helpers@0.5.23)(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2):
+  i18next-cli@1.80.0(@swc/helpers@0.5.23)(@types/node@26.6.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2):
     dependencies:
       '@croct/json5-parser': 0.2.2
       '@formatjs/icu-messageformat-parser': 3.5.22
