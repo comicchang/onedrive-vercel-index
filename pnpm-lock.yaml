@@ -316,8 +316,8 @@ importers:
         specifier: ^15.5.13
         version: 15.5.13
       i18next-cli:
-        specifier: 1.91.3
-        version: 1.91.3(@swc/helpers@0.5.23)(@types/node@26.6.5)(@types/react@19.3.0)(react@19.3.1)(typescript@7.0.2)
+        specifier: 1.93.0
+        version: 1.93.0(@swc/helpers@0.5.23)(@types/node@26.6.5)(@types/react@19.3.0)(react@19.3.1)(typescript@7.0.2)
       prettier:
         specifier: ^3.9.10
         version: 3.10.1
@@ -1830,8 +1830,8 @@ packages:
     resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
     engines: {node: '>= 6'}
 
-  i18next-cli@1.91.3:
-    resolution: {integrity: sha512-vuugsOxsdGzIyhPlY3yCkX8FPqCDCHcJD0Am1gDyTpJmur8DKgu9rqO6FczdGExJLLnMCA00cBmOiLyt2J9gmg==}
+  i18next-cli@1.93.0:
+    resolution: {integrity: sha512-cHUEoK618TOxz7VZF/YkVaB98qZ+j8/6qr+3L5gcXKAv+Sd2uJBaNsUzB4m7iOfNBcl6Ctzj2WCP74cHLKZX3Q==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -4186,7 +4186,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  i18next-cli@1.91.3(@swc/helpers@0.5.23)(@types/node@26.6.5)(@types/react@19.3.0)(react@19.3.1)(typescript@7.0.2):
+  i18next-cli@1.93.0(@swc/helpers@0.5.23)(@types/node@26.6.5)(@types/react@19.3.0)(react@19.3.1)(typescript@7.0.2):
     dependencies:
       '@croct/json5-parser': 0.2.2
       '@formatjs/icu-messageformat-parser': 3.5.23
